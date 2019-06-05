@@ -15,6 +15,10 @@
 		406F6BE722A0EC31001D7D07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BE622A0EC31001D7D07 /* main.m */; };
 		406F6BF122A0EC32001D7D07 /* infinitenion_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BF022A0EC32001D7D07 /* infinitenion_iosTests.m */; };
 		406F6BFC22A0EC32001D7D07 /* infinitenion_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BFB22A0EC32001D7D07 /* infinitenion_iosUITests.m */; };
+		406F6C0B22A0EDEE001D7D07 /* CayleyDickson.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C0A22A0EDEE001D7D07 /* CayleyDickson.m */; };
+		406F6C1022A42707001D7D07 /* Real.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C0F22A42707001D7D07 /* Real.m */; };
+		406F6C1422A42E37001D7D07 /* Zero.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1322A42E37001D7D07 /* Zero.m */; };
+		406F6C1622A77C09001D7D07 /* Real_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1522A77C09001D7D07 /* Real_Test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		406F6BF722A0EC32001D7D07 /* infinitenion_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = infinitenion_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		406F6BFB22A0EC32001D7D07 /* infinitenion_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = infinitenion_iosUITests.m; sourceTree = "<group>"; };
 		406F6BFD22A0EC32001D7D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		406F6C0A22A0EDEE001D7D07 /* CayleyDickson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CayleyDickson.m; sourceTree = "<group>"; };
+		406F6C0C22A0EE02001D7D07 /* CayleyDickson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CayleyDickson.h; sourceTree = "<group>"; };
+		406F6C0D22A0FB5C001D7D07 /* SuperComplex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperComplex.h; sourceTree = "<group>"; };
+		406F6C0F22A42707001D7D07 /* Real.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Real.m; sourceTree = "<group>"; };
+		406F6C1122A4271B001D7D07 /* Real.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Real.h; sourceTree = "<group>"; };
+		406F6C1222A42CAC001D7D07 /* Zero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Zero.h; sourceTree = "<group>"; };
+		406F6C1322A42E37001D7D07 /* Zero.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zero.m; sourceTree = "<group>"; };
+		406F6C1522A77C09001D7D07 /* Real_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Real_Test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		406F6BD622A0EC30001D7D07 /* infinitenion_ios */ = {
 			isa = PBXGroup;
 			children = (
+				406F6C0922A0ECB6001D7D07 /* CayleyDickson */,
 				406F6BD722A0EC30001D7D07 /* AppDelegate.h */,
 				406F6BD822A0EC30001D7D07 /* AppDelegate.m */,
 				406F6BDA22A0EC30001D7D07 /* ViewController.h */,
@@ -119,6 +132,7 @@
 			children = (
 				406F6BF022A0EC32001D7D07 /* infinitenion_iosTests.m */,
 				406F6BF222A0EC32001D7D07 /* Info.plist */,
+				406F6C1522A77C09001D7D07 /* Real_Test.m */,
 			);
 			path = infinitenion_iosTests;
 			sourceTree = "<group>";
@@ -130,6 +144,20 @@
 				406F6BFD22A0EC32001D7D07 /* Info.plist */,
 			);
 			path = infinitenion_iosUITests;
+			sourceTree = "<group>";
+		};
+		406F6C0922A0ECB6001D7D07 /* CayleyDickson */ = {
+			isa = PBXGroup;
+			children = (
+				406F6C0A22A0EDEE001D7D07 /* CayleyDickson.m */,
+				406F6C0C22A0EE02001D7D07 /* CayleyDickson.h */,
+				406F6C0D22A0FB5C001D7D07 /* SuperComplex.h */,
+				406F6C0F22A42707001D7D07 /* Real.m */,
+				406F6C1122A4271B001D7D07 /* Real.h */,
+				406F6C1222A42CAC001D7D07 /* Zero.h */,
+				406F6C1322A42E37001D7D07 /* Zero.m */,
+			);
+			path = CayleyDickson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				406F6C1022A42707001D7D07 /* Real.m in Sources */,
+				406F6C1422A42E37001D7D07 /* Zero.m in Sources */,
+				406F6C0B22A0EDEE001D7D07 /* CayleyDickson.m in Sources */,
 				406F6BDC22A0EC30001D7D07 /* ViewController.m in Sources */,
 				406F6BE722A0EC31001D7D07 /* main.m in Sources */,
 				406F6BD922A0EC30001D7D07 /* AppDelegate.m in Sources */,
@@ -273,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				406F6BF122A0EC32001D7D07 /* infinitenion_iosTests.m in Sources */,
+				406F6C1622A77C09001D7D07 /* Real_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
