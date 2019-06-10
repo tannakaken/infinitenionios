@@ -62,6 +62,10 @@ static Zero *singleton = nil;
     return [other negate];
 }
 
+- (nonnull id<SuperComplex>)inverse {
+    return nil;
+}
+
 - (NSString *)description {
     return @"0";
 }

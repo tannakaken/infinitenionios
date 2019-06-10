@@ -65,6 +65,18 @@
     XCTAssert([[one sub:two] isEqual:[[Real alloc] initWithReal:-1]]);
 }
 
+- (void)testMul {
+    Real *two = [[Real alloc] initWithReal:2];
+    Real *three = [[Real alloc] initWithReal:3];
+    XCTAssert([[two mul:three] isEqual:[[Real alloc] initWithReal:6]]);
+}
+
+- (void)testDiv {
+    Real *three = [[Real alloc] initWithReal:3];
+    Real *two = [[Real alloc] initWithReal:2];
+    XCTAssert([[three div:two] isEqual:[[Real alloc] initWithReal:1.5]]);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

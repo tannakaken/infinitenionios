@@ -48,6 +48,10 @@
     return nil;
 }
 
+- (nonnull id<SuperComplex>)inverse {
+    return nil;
+}
+
 - (NSString *)description {
     return @"";
 }

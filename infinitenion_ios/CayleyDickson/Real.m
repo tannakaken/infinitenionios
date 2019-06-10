@@ -40,22 +40,6 @@
                                     withHeight:other.height];
 }
 
-- (nonnull id<SuperComplex>)conj {
-    return nil;
-}
-
-- (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {
-    return nil;
-}
-
-- (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
-    return nil;
-}
-
-- (nonnull id<SuperComplex>)negate {
-    return nil;
-}
-
 - (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
     if (other.height == 0) {
         return [[Real alloc] initWithReal:self.value - ((Real *)other).value];
@@ -65,6 +49,34 @@
                                     withHeight:other.height];
 }
 
+- (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
+    if (other.height == 0) {
+        return [[Real alloc] initWithReal:self.value * ((Real *)other).value];
+    }
+    return [[CayleyDickson alloc] initWithReal:[self mul:other.real]
+                                     withImage:[self mul:other.image]
+                                    withHeight:other.height];
+}
+
+- (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {
+    if (other.height == 0) {
+        return [[Real alloc] initWithReal:self.value / ((Real *)other).value];
+    }
+    return nil;
+}
+
+- (nonnull id<SuperComplex>)negate {
+    return nil;
+}
+
+- (nonnull id<SuperComplex>)conj {
+    return nil;
+}
+
+- (nonnull id<SuperComplex>)inverse {
+    return nil;
+}
+            
 - (NSString *)description {
     return @(self.value).stringValue;
 }

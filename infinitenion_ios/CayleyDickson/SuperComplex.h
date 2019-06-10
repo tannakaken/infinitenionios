@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (id<SuperComplex>)div:(id<SuperComplex>)other;
 - (id<SuperComplex>)conj;
 - (id<SuperComplex>)negate;
+- (id<SuperComplex>)inverse;
 @end
 
 NS_ASSUME_NONNULL_END
