@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol SuperComplex <NSObject>
+@protocol SuperComplex
 @property (nonatomic, readonly) id<SuperComplex> real;
 @property (nonatomic, readonly) id<SuperComplex> image;
 @property (nonatomic, readonly) NSUInteger height;
@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (id<SuperComplex>)conj;
 - (id<SuperComplex>)negate;
 - (id<SuperComplex>)inverse;
+- (double)sqareAbs;
+- (BOOL)isNaN;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -52,6 +52,14 @@
     return nil;
 }
 
+- (double)sqareAbs {
+    return self.real.sqareAbs + self.image.sqareAbs;
+}
+
+- (BOOL)isNaN {
+    return false;
+}
+
 - (NSString *)description {
     return @"";
 }

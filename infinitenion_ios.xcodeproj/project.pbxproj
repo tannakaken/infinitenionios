@@ -19,6 +19,8 @@
 		406F6C1022A42707001D7D07 /* Real.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C0F22A42707001D7D07 /* Real.m */; };
 		406F6C1422A42E37001D7D07 /* Zero.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1322A42E37001D7D07 /* Zero.m */; };
 		406F6C1622A77C09001D7D07 /* Real_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1522A77C09001D7D07 /* Real_Test.m */; };
+		406F6C1A22B0098E001D7D07 /* NaN.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1922B0098E001D7D07 /* NaN.m */; };
+		406F6C1D22B0F655001D7D07 /* SuperComplexFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1C22B0F655001D7D07 /* SuperComplexFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		406F6C1222A42CAC001D7D07 /* Zero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Zero.h; sourceTree = "<group>"; };
 		406F6C1322A42E37001D7D07 /* Zero.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zero.m; sourceTree = "<group>"; };
 		406F6C1522A77C09001D7D07 /* Real_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Real_Test.m; sourceTree = "<group>"; };
+		406F6C1822B00890001D7D07 /* NaN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaN.h; sourceTree = "<group>"; };
+		406F6C1922B0098E001D7D07 /* NaN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaN.m; sourceTree = "<group>"; };
+		406F6C1B22B0F4B9001D7D07 /* SuperComplexFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperComplexFactory.h; sourceTree = "<group>"; };
+		406F6C1C22B0F655001D7D07 /* SuperComplexFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperComplexFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,10 @@
 				406F6C1122A4271B001D7D07 /* Real.h */,
 				406F6C1222A42CAC001D7D07 /* Zero.h */,
 				406F6C1322A42E37001D7D07 /* Zero.m */,
+				406F6C1822B00890001D7D07 /* NaN.h */,
+				406F6C1922B0098E001D7D07 /* NaN.m */,
+				406F6C1B22B0F4B9001D7D07 /* SuperComplexFactory.h */,
+				406F6C1C22B0F655001D7D07 /* SuperComplexFactory.m */,
 			);
 			path = CayleyDickson;
 			sourceTree = "<group>";
@@ -293,9 +303,11 @@
 				406F6C1022A42707001D7D07 /* Real.m in Sources */,
 				406F6C1422A42E37001D7D07 /* Zero.m in Sources */,
 				406F6C0B22A0EDEE001D7D07 /* CayleyDickson.m in Sources */,
+				406F6C1A22B0098E001D7D07 /* NaN.m in Sources */,
 				406F6BDC22A0EC30001D7D07 /* ViewController.m in Sources */,
 				406F6BE722A0EC31001D7D07 /* main.m in Sources */,
 				406F6BD922A0EC30001D7D07 /* AppDelegate.m in Sources */,
+				406F6C1D22B0F655001D7D07 /* SuperComplexFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -77,6 +77,31 @@
     XCTAssert([[three div:two] isEqual:[[Real alloc] initWithReal:1.5]]);
 }
 
+- (void)testNegate {
+    Real *four = [[Real alloc] initWithReal:4];
+    XCTAssert([[four negate] isEqual:[[Real alloc] initWithReal:-4]]);
+}
+
+- (void)testConj {
+    Real *five = [[Real alloc] initWithReal:5];
+    XCTAssert([[five conj] isEqual:[[Real alloc] initWithReal:5]]);
+}
+
+- (void)testInverse {
+    Real *six = [[Real alloc] initWithReal:6];
+    XCTAssert([[six inverse] isEqual:[[Real alloc] initWithReal:1.0/6.0]]);
+}
+
+- (void)testSquareAbs {
+    Real *seven = [[Real alloc] initWithReal:7];
+    XCTAssertEqual([seven sqareAbs], 49.0);
+}
+
+- (void)testNotNan {
+    Real *eight = [[Real alloc] initWithReal:8];
+    XCTAssertFalse(eight.isNaN);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

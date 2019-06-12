@@ -7,6 +7,7 @@
 //
 
 #import "Zero.h"
+#import "NaN.h"
 
 @interface Zero()
 @property (nonatomic, readonly) double value;
@@ -32,8 +33,10 @@ static Zero *singleton = nil;
 }
 
 + (instancetype)zero {
-    if (!singleton) {
-        singleton = [Zero new];
+    @synchronized (self) {
+        if (!singleton) {
+            singleton = [Zero new];
+        }
     }
     return singleton;
 }
@@ -63,7 +66,15 @@ static Zero *singleton = nil;
 }
 
 - (nonnull id<SuperComplex>)inverse {
-    return nil;
+    return [NaN nan];
+}
+
+- (double)sqareAbs {
+    return 0;
+}
+
+- (BOOL)isNaN {
+    return NO;
 }
 
 - (NSString *)description {

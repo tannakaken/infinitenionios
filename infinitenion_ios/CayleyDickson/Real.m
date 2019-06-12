@@ -32,6 +32,9 @@
 }
 
 - (nonnull id<SuperComplex>)add:(nonnull id<SuperComplex>)other {
+    if (other.isNaN) {
+        return other;
+    }
     if (other.height == 0) {
         return [[Real alloc] initWithReal:self.value + ((Real *)other).value];
     }
@@ -41,6 +44,9 @@
 }
 
 - (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
+    if (other.isNaN) {
+        return other;
+    }
     if (other.height == 0) {
         return [[Real alloc] initWithReal:self.value - ((Real *)other).value];
     }
@@ -50,6 +56,9 @@
 }
 
 - (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
+    if (other.isNaN) {
+        return other;
+    }
     if (other.height == 0) {
         return [[Real alloc] initWithReal:self.value * ((Real *)other).value];
     }
@@ -59,24 +68,29 @@
 }
 
 - (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {
-    if (other.height == 0) {
-        return [[Real alloc] initWithReal:self.value / ((Real *)other).value];
-    }
-    return nil;
+    return [self mul:other.inverse];
 }
 
 - (nonnull id<SuperComplex>)negate {
-    return nil;
+    return [[Real alloc] initWithReal:-self.value];
 }
 
 - (nonnull id<SuperComplex>)conj {
-    return nil;
+    return self;
 }
 
 - (nonnull id<SuperComplex>)inverse {
-    return nil;
+    return [[Real alloc] initWithReal:1/self.value];
 }
-            
+
+- (double)sqareAbs {
+    return self.value * self.value;
+}
+
+- (BOOL)isNaN {
+    return NO;
+}
+
 - (NSString *)description {
     return @(self.value).stringValue;
 }

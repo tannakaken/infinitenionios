@@ -10,6 +10,6 @@
 #define Zero_h
 #import "Real.h"
 @interface Zero : Real
-+ (id)zero;
++ (instancetype)zero;
 @end
 #endif /* Zero_h */
