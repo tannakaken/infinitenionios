@@ -87,6 +87,10 @@
     return self.value * self.value;
 }
 
+- (BOOL)isZero {
+    return self.value == 0;
+}
+
 - (BOOL)isNaN {
     return NO;
 }

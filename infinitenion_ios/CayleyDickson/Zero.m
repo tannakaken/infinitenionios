@@ -73,6 +73,10 @@ static Zero *singleton = nil;
     return 0;
 }
 
+- (BOOL)isZero {
+    return YES;
+}
+
 - (BOOL)isNaN {
     return NO;
 }

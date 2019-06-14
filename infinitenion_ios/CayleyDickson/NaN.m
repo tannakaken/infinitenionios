@@ -51,6 +51,10 @@ static NaN *singleton = nil;
     return singleton;
 }
 
+- (BOOL)isZero {
+    return NO;
+}
+
 - (BOOL)isNaN {
     return YES;
 }

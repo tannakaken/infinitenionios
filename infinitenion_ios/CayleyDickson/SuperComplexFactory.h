@@ -10,10 +10,10 @@
 #define SuperComplexFactory_h
 #import "SuperComplex.h"
 @interface SuperComplexFactory : NSObject
-- (id<SuperComplex>)zero;
-- (id<SuperComplex>)nan;
-- (id<SuperComplex>)real:(double *)real;
-- (id<SuperComplex>)real:(id<SuperComplex>)real image:(id<SuperComplex>)image;
-+ (instancetype)defaultFactory;
+- (nonnull id<SuperComplex>)zero;
+- (nonnull id<SuperComplex>)nan;
+- (nonnull id<SuperComplex>)real:(double)real;
+- (nonnull id<SuperComplex>)real:(nonnull id<SuperComplex>)real
+                           image:(nonnull id<SuperComplex>)image;
 @end
 #endif /* SuperComplexFactory_h */

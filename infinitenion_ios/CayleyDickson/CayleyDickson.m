@@ -56,6 +56,10 @@
     return self.real.sqareAbs + self.image.sqareAbs;
 }
 
+- (BOOL)isZero {
+    return self.real.isZero && self.image.isZero;
+}
+
 - (BOOL)isNaN {
     return false;
 }

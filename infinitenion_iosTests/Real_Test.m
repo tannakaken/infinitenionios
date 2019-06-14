@@ -7,17 +7,17 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Real.h"
-#import "Zero.h"
+#import "SuperComplexFactory.h"
 
 @interface Real_Test : XCTestCase
-
+@property (nonatomic) SuperComplexFactory *factory;
 @end
 
 @implementation Real_Test
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.factory = [SuperComplexFactory new];
 }
 
 - (void)tearDown {
@@ -27,79 +27,102 @@
 - (void)testDescription {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    Real *r = [[Real alloc] initWithReal:1.5];
+    id<SuperComplex> r = [self.factory real:1.5];
     XCTAssert([[r description] isEqualToString:@"1.5"]);
 }
 
 - (void)testEqual {
-    Real *r1 = [[Real alloc] initWithReal:1];
-    Real *r2 = [[Real alloc] initWithReal:1];
+    id<SuperComplex> r1 = [self.factory real:1];
+    id<SuperComplex> r2 = [self.factory real:1];
     XCTAssert([r1 isEqual:r2]);
 }
 
 - (void)testHeight {
-    Real *r = [[Real alloc] initWithReal:3.14];
+    id<SuperComplex> r = [self.factory real:3.14];
     XCTAssertEqual(r.height, 0);
 }
 
 - (void)testRealOfReal {
-    Real *r = [[Real alloc] initWithReal:2.71];
+    id<SuperComplex> r = [self.factory real:2.71];
     XCTAssertEqual(r.real, r);
 }
 
 - (void)testImageOfRealIsZero {
-    Real *r = [[Real alloc] initWithReal:1.23];
-    Zero *zero = [Zero zero];
+    id<SuperComplex> r = [self.factory real:1.23];
+    id<SuperComplex> zero = [self.factory zero];
     XCTAssertEqual(r.image, zero);
 }
 
 - (void)testAdd {
-    Real *one = [[Real alloc] initWithReal:1];
-    Real *two = [[Real alloc] initWithReal:2];
-    XCTAssert([[one add:two] isEqual:[[Real alloc] initWithReal:3]]);
+    id<SuperComplex> one = [self.factory real:1];
+    id<SuperComplex> two = [self.factory real:2];
+    XCTAssert([[one add:two] isEqual:[self.factory real:3]]);
 }
 
 - (void)testSub {
-    Real *one = [[Real alloc] initWithReal:1];
-    Real *two = [[Real alloc] initWithReal:2];
-    XCTAssert([[one sub:two] isEqual:[[Real alloc] initWithReal:-1]]);
+    id<SuperComplex> one = [self.factory real:1];
+    id<SuperComplex> two = [self.factory real:2];
+    XCTAssert([[one sub:two] isEqual:[self.factory real:-1]]);
 }
 
 - (void)testMul {
-    Real *two = [[Real alloc] initWithReal:2];
-    Real *three = [[Real alloc] initWithReal:3];
-    XCTAssert([[two mul:three] isEqual:[[Real alloc] initWithReal:6]]);
+    id<SuperComplex> two = [self.factory real:2];
+    id<SuperComplex> three = [self.factory real:3];
+    XCTAssert([[two mul:three] isEqual:[self.factory real:6]]);
 }
 
 - (void)testDiv {
-    Real *three = [[Real alloc] initWithReal:3];
-    Real *two = [[Real alloc] initWithReal:2];
-    XCTAssert([[three div:two] isEqual:[[Real alloc] initWithReal:1.5]]);
+    id<SuperComplex> three = [self.factory real:3];
+    id<SuperComplex> two = [self.factory real:2];
+    XCTAssert([[three div:two] isEqual:[self.factory real:1.5]]);
 }
 
 - (void)testNegate {
-    Real *four = [[Real alloc] initWithReal:4];
-    XCTAssert([[four negate] isEqual:[[Real alloc] initWithReal:-4]]);
+    id<SuperComplex> four = [self.factory real:4];
+    XCTAssert([[four negate] isEqual:[self.factory real:-4]]);
 }
 
 - (void)testConj {
-    Real *five = [[Real alloc] initWithReal:5];
-    XCTAssert([[five conj] isEqual:[[Real alloc] initWithReal:5]]);
+    id<SuperComplex> five = [self.factory real:5];
+    XCTAssert([[five conj] isEqual:[self.factory real:5]]);
 }
 
 - (void)testInverse {
-    Real *six = [[Real alloc] initWithReal:6];
-    XCTAssert([[six inverse] isEqual:[[Real alloc] initWithReal:1.0/6.0]]);
+    id<SuperComplex> six = [self.factory real:6];
+    XCTAssert([[six inverse] isEqual:[self.factory real:1.0/6.0]]);
 }
 
 - (void)testSquareAbs {
-    Real *seven = [[Real alloc] initWithReal:7];
+    id<SuperComplex> seven = [self.factory real:7];
     XCTAssertEqual([seven sqareAbs], 49.0);
 }
 
 - (void)testNotNan {
-    Real *eight = [[Real alloc] initWithReal:8];
+    id<SuperComplex> eight = [self.factory real:8];
     XCTAssertFalse(eight.isNaN);
+}
+
+- (void)testZeroDivision {
+    id <SuperComplex> zero = [self.factory zero];
+    XCTAssert(zero.inverse.isNaN);
+}
+
+- (void)testCalcWithNan {
+    id<SuperComplex> one = [self.factory real:1];
+    id<SuperComplex> nan = [self.factory nan];
+    XCTAssert([one add:nan].isNaN);
+    XCTAssert([one sub:nan].isNaN);
+    XCTAssert([one mul:nan].isNaN);
+    XCTAssert([one div:nan].isNaN);
+}
+
+- (void)testCalcWithZero {
+    id<SuperComplex> two = [self.factory real:2];
+    id<SuperComplex> zero = [self.factory zero];
+    XCTAssert([[two add:zero] isEqual:two]);
+    XCTAssert([[two sub:zero] isEqual:two]);
+    XCTAssert([[two mul:zero] isEqual:zero]);
+    XCTAssert([two div:zero].isNaN);
 }
 
 - (void)testPerformanceExample {
