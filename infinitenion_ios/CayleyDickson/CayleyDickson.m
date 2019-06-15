@@ -7,6 +7,7 @@
 //
 
 #import "CayleyDickson.h"
+#import "SuperComplexFactory.h"
 
 @implementation CayleyDickson
 
@@ -14,7 +15,13 @@
 @synthesize real = _real;
 @synthesize image = _image;
 
+static SuperComplexFactory *factory;
+
 - (instancetype)initWithReal:(CayleyDickson *)real withImage:(CayleyDickson *)image withHeight:(NSUInteger)height {
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^() {
+        factory = [SuperComplexFactory getInstance];
+    });
     self = [super init];
     if (self) {
         _real = real;
@@ -62,6 +69,10 @@
 
 - (BOOL)isNaN {
     return false;
+}
+
+- (double)realReal {
+    return self.real.realReal;
 }
 
 - (NSString *)description {

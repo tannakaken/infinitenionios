@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4026182722B478F8009F531B /* Zero_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182622B478F8009F531B /* Zero_Test.m */; };
 		406F6BD922A0EC30001D7D07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BD822A0EC30001D7D07 /* AppDelegate.m */; };
 		406F6BDC22A0EC30001D7D07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BDB22A0EC30001D7D07 /* ViewController.m */; };
 		406F6BDF22A0EC30001D7D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406F6BDD22A0EC30001D7D07 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4026182622B478F8009F531B /* Zero_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zero_Test.m; sourceTree = "<group>"; };
 		406F6BD422A0EC30001D7D07 /* infinitenion_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infinitenion_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406F6BD722A0EC30001D7D07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		406F6BD822A0EC30001D7D07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				406F6BF022A0EC32001D7D07 /* infinitenion_iosTests.m */,
 				406F6BF222A0EC32001D7D07 /* Info.plist */,
 				406F6C1522A77C09001D7D07 /* Real_Test.m */,
+				4026182622B478F8009F531B /* Zero_Test.m */,
 			);
 			path = infinitenion_iosTests;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				406F6BF122A0EC32001D7D07 /* infinitenion_iosTests.m in Sources */,
 				406F6C1622A77C09001D7D07 /* Real_Test.m in Sources */,
+				4026182722B478F8009F531B /* Zero_Test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

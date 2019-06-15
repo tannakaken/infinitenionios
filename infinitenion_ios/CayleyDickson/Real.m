@@ -7,8 +7,8 @@
 //
 
 #import "Real.h"
-#import "Zero.h"
-#import "CayleyDickson.h"
+#import "SuperComplexFactory.h"
+#import <math.h>
 
 @interface Real()
 @property (nonatomic,readonly) double value;
@@ -20,51 +20,42 @@
 @synthesize image = _image;
 @synthesize height = _height;
 
+static SuperComplexFactory *factory;
+
 - (instancetype)initWithReal:(double)real {
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^() {
+        factory = [SuperComplexFactory getInstance];
+    });
     self = [super init];
     if (self) {
         _value = real;
         _real = self;
-        _image = [Zero zero];
+        _image = [factory zero];
         _height = 0;
     }
     return self;
 }
 
 - (nonnull id<SuperComplex>)add:(nonnull id<SuperComplex>)other {
-    if (other.isNaN) {
-        return other;
-    }
     if (other.height == 0) {
-        return [[Real alloc] initWithReal:self.value + ((Real *)other).value];
+        return [factory real:self.value + other.realReal];
     }
-    return [[CayleyDickson alloc] initWithReal:[self add:other.real]
-                                     withImage:other.image
-                                    withHeight:other.height];
+    return [factory real:[self add:other.real] image:other.image];
 }
 
 - (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
-    if (other.isNaN) {
-        return other;
-    }
     if (other.height == 0) {
-        return [[Real alloc] initWithReal:self.value - ((Real *)other).value];
+        return [factory real: self.value - other.realReal];
     }
-    return [[CayleyDickson alloc] initWithReal:[self sub:other.real]
-                                     withImage:other.image
-                                    withHeight:other.height];
+    return [factory real:[self sub:other.real] image:other.image];
 }
 
 - (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
-    if (other.isNaN) {
-        return other;
-    }
     if (other.height == 0) {
-        return [[Real alloc] initWithReal:self.value * ((Real *)other).value];
+        return [factory real:self.value * other.realReal];
     }
-    return [[CayleyDickson alloc] initWithReal:[self mul:other.real]
-                                     withImage:[self mul:other.image]
-                                    withHeight:other.height];
+    return [factory real:[self mul:other.real] image:[self mul:other.image]];
 }
 
 - (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {
@@ -72,7 +63,7 @@
 }
 
 - (nonnull id<SuperComplex>)negate {
-    return [[Real alloc] initWithReal:-self.value];
+    return [factory real:-self.value];
 }
 
 - (nonnull id<SuperComplex>)conj {
@@ -80,7 +71,8 @@
 }
 
 - (nonnull id<SuperComplex>)inverse {
-    return [[Real alloc] initWithReal:1/self.value];
+    assert(self.value != 0);
+    return [factory real:1/self.value];
 }
 
 - (double)sqareAbs {
@@ -88,11 +80,15 @@
 }
 
 - (BOOL)isZero {
-    return self.value == 0;
+    return self.value == 0.0;
 }
 
 - (BOOL)isNaN {
-    return NO;
+    return isnan(self.value);
+}
+
+- (double) realReal {
+    return self.value;
 }
 
 - (NSString *)description {
@@ -100,6 +96,9 @@
 }
 
 - (BOOL)isEqual:(id)object {
+    if (object == self) {
+        return true;
+    }
     if (object == nil) {
         return false;
     }

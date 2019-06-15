@@ -8,8 +8,8 @@
 
 #ifndef NaN_h
 #define NaN_h
-#import "SuperComplex.h"
-@interface NaN : NSObject<SuperComplex>
+#import "Real.h"
+@interface NaN : Real
 + (instancetype)nan;
 @end
 #endif /* NaN_h */

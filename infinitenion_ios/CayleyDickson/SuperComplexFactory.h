@@ -15,5 +15,6 @@
 - (nonnull id<SuperComplex>)real:(double)real;
 - (nonnull id<SuperComplex>)real:(nonnull id<SuperComplex>)real
                            image:(nonnull id<SuperComplex>)image;
++ (nonnull instancetype)getInstance;
 @end
 #endif /* SuperComplexFactory_h */

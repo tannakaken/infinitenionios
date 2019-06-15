@@ -19,12 +19,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (id<SuperComplex>)sub:(id<SuperComplex>)other;
 - (id<SuperComplex>)mul:(id<SuperComplex>)other;
 - (id<SuperComplex>)div:(id<SuperComplex>)other;
-- (id<SuperComplex>)conj;
 - (id<SuperComplex>)negate;
+- (id<SuperComplex>)conj;
 - (id<SuperComplex>)inverse;
 - (double)sqareAbs;
 - (BOOL)isZero;
 - (BOOL)isNaN;
+- (double)realReal;
 @end
 
 NS_ASSUME_NONNULL_END

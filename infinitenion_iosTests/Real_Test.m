@@ -25,8 +25,6 @@
 }
 
 - (void)testDescription {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
     id<SuperComplex> r = [self.factory real:1.5];
     XCTAssert([[r description] isEqualToString:@"1.5"]);
 }

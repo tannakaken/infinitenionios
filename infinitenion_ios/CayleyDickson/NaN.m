@@ -8,9 +8,11 @@
 
 #import "NaN.h"
 
-@implementation NaN
+@interface NaN()
+@property (nonatomic, readonly) double value;
+@end
 
-static NaN *singleton = nil;
+@implementation NaN
 
 @synthesize height = _height;
 @synthesize image = _image;
@@ -19,12 +21,15 @@ static NaN *singleton = nil;
 - (instancetype)init {
     self = [super init];
     if (self) {
+        _value = 0.0/0.0;
         _height = 0;
         _real = self;
         _image = self;
     }
     return self;
 }
+
+static NaN *singleton = nil;
 
 + (instancetype)nan {
     @synchronized (self) {
@@ -36,43 +41,31 @@ static NaN *singleton = nil;
 }
 
 - (nonnull id<SuperComplex>)add:(nonnull id<SuperComplex>)other {
-    return singleton;
-}
-
-- (nonnull id<SuperComplex>)conj {
-    return singleton;
-}
-
-- (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {
-    return singleton;
-}
-
-- (nonnull id<SuperComplex>)inverse {
-    return singleton;
-}
-
-- (BOOL)isZero {
-    return NO;
-}
-
-- (BOOL)isNaN {
-    return YES;
-}
-
-- (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
-    return singleton;
-}
-
-- (nonnull id<SuperComplex>)negate {
-    return singleton;
-}
-
-- (double)sqareAbs {
-    return 0;
+    return self;
 }
 
 - (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
-    return singleton;
+    return self;
+}
+
+- (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
+    return self;
+}
+
+- (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {
+    return self;
+}
+
+- (nonnull id<SuperComplex>)negate {
+    return self;
+}
+
+- (nonnull id<SuperComplex>)conj {
+    return self;
+}
+
+- (nonnull id<SuperComplex>)inverse {
+    return self;
 }
 
 @end

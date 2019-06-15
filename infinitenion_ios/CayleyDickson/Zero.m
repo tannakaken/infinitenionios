@@ -45,7 +45,11 @@ static Zero *singleton = nil;
     return other;
 }
 
-- (nonnull id<SuperComplex>)conj {
+- (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
+    return [other negate];
+}
+
+- (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
     return self;
 }
 
@@ -53,36 +57,16 @@ static Zero *singleton = nil;
     return self;
 }
 
-- (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
-    return self;
-}
-
 - (nonnull id<SuperComplex>)negate {
     return self;
 }
 
-- (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
-    return [other negate];
+- (nonnull id<SuperComplex>)conj {
+    return self;
 }
 
 - (nonnull id<SuperComplex>)inverse {
     return [NaN nan];
-}
-
-- (double)sqareAbs {
-    return 0;
-}
-
-- (BOOL)isZero {
-    return YES;
-}
-
-- (BOOL)isNaN {
-    return NO;
-}
-
-- (NSString *)description {
-    return @"0";
 }
 
 @end

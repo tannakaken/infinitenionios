@@ -40,12 +40,29 @@
     if (superComplex.isZero) {
         return [self zero];
     }
+    if (superComplex.isNaN) {
+        return [self nan];
+    }
+    if (superComplex.height == 0) {
+        return superComplex;
+    }
     if (superComplex.image.isZero) {
         return [self simplify:superComplex.real];
     }
     return [[CayleyDickson alloc] initWithReal:[self simplify:superComplex.real]
                                      withImage:[self simplify:superComplex.image]
                                     withHeight:superComplex.height];
+}
+
+static SuperComplexFactory *singleton = nil;
+
++ (instancetype) getInstance{
+    @synchronized (self) {
+        if (!singleton) {
+            singleton = [SuperComplexFactory new];
+        }
+    }
+    return singleton;
 }
 
 @end
