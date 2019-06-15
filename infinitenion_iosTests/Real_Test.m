@@ -59,8 +59,17 @@
 
 - (void)testAdd {
     id<SuperComplex> one = [self.factory real:1];
-    id<SuperComplex> two = [self.factory real:2];
-    XCTAssert([[one add:two] isEqual:[self.factory real:3]]);
+    
+    XCTAssert([[one add:[self.factory real:2]] isEqual:[self.factory real:3]]);
+    
+    id<SuperComplex> zero = [self.factory zero];
+    XCTAssert([[one add:zero] isEqual:one]);
+    
+    XCTAssert([[one add:[self.factory nan]] isEqual:[self.factory nan]]);
+    
+    id<SuperComplex> zeroone = [self.factory real:zero image:one];
+    id<SuperComplex> oneone = [self.factory real:one image:one];
+    XCTAssert([[one add:zeroone] isEqual:oneone]);
 }
 
 - (void)testSub {

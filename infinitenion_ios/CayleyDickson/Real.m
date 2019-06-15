@@ -45,7 +45,7 @@ static SuperComplexFactory *factory;
 }
 
 - (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
-    return [self add:[other negate]];
+    return [self add:other.negate];
 }
 
 - (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {

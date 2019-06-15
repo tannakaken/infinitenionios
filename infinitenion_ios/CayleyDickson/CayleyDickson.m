@@ -48,7 +48,7 @@ static SuperComplexFactory *factory;
 }
 
 - (nonnull id<SuperComplex>)negate {
-    return nil;
+    return [factory real:self.real.negate image:self.image.negate];
 }
 
 - (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
@@ -77,6 +77,20 @@ static SuperComplexFactory *factory;
 
 - (NSString *)description {
     return @"";
+}
+
+- (BOOL)isEqual:(id)object {
+    if (object == self) {
+        return true;
+    }
+    if (object == nil) {
+        return false;
+    }
+    if (![object isMemberOfClass:CayleyDickson.class]) {
+        return false;
+    }
+    CayleyDickson *c = (CayleyDickson *)object;
+    return [self.real isEqual:c.real] && [self.image isEqual:c.image];
 }
 
 @end
