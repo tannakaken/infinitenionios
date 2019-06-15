@@ -30,9 +30,16 @@
 }
 
 - (void)testEqual {
-    id<SuperComplex> r1 = [self.factory real:1];
-    id<SuperComplex> r2 = [self.factory real:1];
-    XCTAssert([r1 isEqual:r2]);
+    XCTAssert([[self.factory real:1] isEqual:[self.factory real:1]]);
+}
+
+- (void)testNotEqual {
+    id<SuperComplex> one = [self.factory real:1];
+    XCTAssertFalse([one isEqual:[self.factory real:2]]);
+    XCTAssertFalse([one isEqual:[self.factory zero]]);
+    XCTAssertFalse([one isEqual:[self.factory nan]]);
+    XCTAssertFalse([one isEqual:[self.factory real:[self.factory real:1]
+                                             image:[self.factory real:2]]]);
 }
 
 - (void)testHeight {
@@ -42,13 +49,12 @@
 
 - (void)testRealOfReal {
     id<SuperComplex> r = [self.factory real:2.71];
-    XCTAssertEqual(r.real, r);
+    XCTAssert([r.real isEqual:r]);
 }
 
 - (void)testImageOfRealIsZero {
     id<SuperComplex> r = [self.factory real:1.23];
-    id<SuperComplex> zero = [self.factory zero];
-    XCTAssertEqual(r.image, zero);
+    XCTAssert([r.image isEqual:[self.factory zero]]);
 }
 
 - (void)testAdd {

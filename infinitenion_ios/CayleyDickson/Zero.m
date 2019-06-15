@@ -45,15 +45,17 @@ static Zero *singleton = nil;
     return other;
 }
 
-- (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
-    return [other negate];
-}
-
 - (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
+    if (other.isNaN) {
+        return other;
+    }
     return self;
 }
 
 - (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {
+    if (other.isNaN) {
+        return other;
+    }
     return self;
 }
 
