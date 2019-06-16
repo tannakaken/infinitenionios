@@ -134,7 +134,11 @@
     XCTAssertEqual([seven sqareAbs], 49.0);
 }
 
-- (void)testNotNan {
+- (void)testIsNotZero {
+    XCTAssertFalse(one.isZero);
+}
+
+- (void)testIsNotNan {
     id<SuperComplex> eight = [factory real:8];
     XCTAssertFalse(eight.isNaN);
 }

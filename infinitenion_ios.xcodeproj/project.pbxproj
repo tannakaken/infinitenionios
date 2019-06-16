@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4026182722B478F8009F531B /* Zero_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182622B478F8009F531B /* Zero_Test.m */; };
+		4026182722B478F8009F531B /* Zero_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182622B478F8009F531B /* Zero_Tests.m */; };
+		4026182922B66B3D009F531B /* NaN_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182822B66B3D009F531B /* NaN_Tests.m */; };
 		406F6BD922A0EC30001D7D07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BD822A0EC30001D7D07 /* AppDelegate.m */; };
 		406F6BDC22A0EC30001D7D07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BDB22A0EC30001D7D07 /* ViewController.m */; };
 		406F6BDF22A0EC30001D7D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406F6BDD22A0EC30001D7D07 /* Main.storyboard */; };
 		406F6BE122A0EC31001D7D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406F6BE022A0EC31001D7D07 /* Assets.xcassets */; };
 		406F6BE422A0EC31001D7D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406F6BE222A0EC31001D7D07 /* LaunchScreen.storyboard */; };
 		406F6BE722A0EC31001D7D07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BE622A0EC31001D7D07 /* main.m */; };
-		406F6BF122A0EC32001D7D07 /* infinitenion_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BF022A0EC32001D7D07 /* infinitenion_iosTests.m */; };
+		406F6BF122A0EC32001D7D07 /* CayleyDickson_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BF022A0EC32001D7D07 /* CayleyDickson_Tests.m */; };
 		406F6BFC22A0EC32001D7D07 /* infinitenion_iosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BFB22A0EC32001D7D07 /* infinitenion_iosUITests.m */; };
 		406F6C0B22A0EDEE001D7D07 /* CayleyDickson.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C0A22A0EDEE001D7D07 /* CayleyDickson.m */; };
 		406F6C1022A42707001D7D07 /* Real.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C0F22A42707001D7D07 /* Real.m */; };
 		406F6C1422A42E37001D7D07 /* Zero.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1322A42E37001D7D07 /* Zero.m */; };
-		406F6C1622A77C09001D7D07 /* Real_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1522A77C09001D7D07 /* Real_Test.m */; };
+		406F6C1622A77C09001D7D07 /* Real_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1522A77C09001D7D07 /* Real_Tests.m */; };
 		406F6C1A22B0098E001D7D07 /* NaN.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1922B0098E001D7D07 /* NaN.m */; };
 		406F6C1D22B0F655001D7D07 /* SuperComplexFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1C22B0F655001D7D07 /* SuperComplexFactory.m */; };
 /* End PBXBuildFile section */
@@ -42,7 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4026182622B478F8009F531B /* Zero_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zero_Test.m; sourceTree = "<group>"; };
+		4026182622B478F8009F531B /* Zero_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zero_Tests.m; sourceTree = "<group>"; };
+		4026182822B66B3D009F531B /* NaN_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaN_Tests.m; sourceTree = "<group>"; };
 		406F6BD422A0EC30001D7D07 /* infinitenion_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infinitenion_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406F6BD722A0EC30001D7D07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		406F6BD822A0EC30001D7D07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		406F6BE522A0EC31001D7D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		406F6BE622A0EC31001D7D07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		406F6BEC22A0EC32001D7D07 /* infinitenion_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = infinitenion_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		406F6BF022A0EC32001D7D07 /* infinitenion_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = infinitenion_iosTests.m; sourceTree = "<group>"; };
+		406F6BF022A0EC32001D7D07 /* CayleyDickson_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CayleyDickson_Tests.m; sourceTree = "<group>"; };
 		406F6BF222A0EC32001D7D07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		406F6BF722A0EC32001D7D07 /* infinitenion_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = infinitenion_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		406F6BFB22A0EC32001D7D07 /* infinitenion_iosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = infinitenion_iosUITests.m; sourceTree = "<group>"; };
@@ -66,7 +68,7 @@
 		406F6C1122A4271B001D7D07 /* Real.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Real.h; sourceTree = "<group>"; };
 		406F6C1222A42CAC001D7D07 /* Zero.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Zero.h; sourceTree = "<group>"; };
 		406F6C1322A42E37001D7D07 /* Zero.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zero.m; sourceTree = "<group>"; };
-		406F6C1522A77C09001D7D07 /* Real_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Real_Test.m; sourceTree = "<group>"; };
+		406F6C1522A77C09001D7D07 /* Real_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Real_Tests.m; sourceTree = "<group>"; };
 		406F6C1822B00890001D7D07 /* NaN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NaN.h; sourceTree = "<group>"; };
 		406F6C1922B0098E001D7D07 /* NaN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaN.m; sourceTree = "<group>"; };
 		406F6C1B22B0F4B9001D7D07 /* SuperComplexFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperComplexFactory.h; sourceTree = "<group>"; };
@@ -138,10 +140,11 @@
 		406F6BEF22A0EC32001D7D07 /* infinitenion_iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				406F6BF022A0EC32001D7D07 /* infinitenion_iosTests.m */,
+				406F6BF022A0EC32001D7D07 /* CayleyDickson_Tests.m */,
 				406F6BF222A0EC32001D7D07 /* Info.plist */,
-				406F6C1522A77C09001D7D07 /* Real_Test.m */,
-				4026182622B478F8009F531B /* Zero_Test.m */,
+				406F6C1522A77C09001D7D07 /* Real_Tests.m */,
+				4026182622B478F8009F531B /* Zero_Tests.m */,
+				4026182822B66B3D009F531B /* NaN_Tests.m */,
 			);
 			path = infinitenion_iosTests;
 			sourceTree = "<group>";
@@ -318,9 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				406F6BF122A0EC32001D7D07 /* infinitenion_iosTests.m in Sources */,
-				406F6C1622A77C09001D7D07 /* Real_Test.m in Sources */,
-				4026182722B478F8009F531B /* Zero_Test.m in Sources */,
+				406F6BF122A0EC32001D7D07 /* CayleyDickson_Tests.m in Sources */,
+				4026182922B66B3D009F531B /* NaN_Tests.m in Sources */,
+				406F6C1622A77C09001D7D07 /* Real_Tests.m in Sources */,
+				4026182722B478F8009F531B /* Zero_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
