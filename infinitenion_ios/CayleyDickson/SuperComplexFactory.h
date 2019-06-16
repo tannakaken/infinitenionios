@@ -15,6 +15,9 @@
 - (nonnull id<SuperComplex>)real:(double)real;
 - (nonnull id<SuperComplex>)real:(nonnull id<SuperComplex>)real
                            image:(nonnull id<SuperComplex>)image;
+- (nonnull id<SuperComplex>)real:(nonnull id<SuperComplex>)real
+                           image:(nonnull id<SuperComplex>)image
+                          height:(NSUInteger)height;
 + (nonnull instancetype)getInstance;
 @end
 #endif /* SuperComplexFactory_h */

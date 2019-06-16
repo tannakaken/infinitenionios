@@ -76,12 +76,17 @@
     XCTAssert([[self.zero mul:[self.factory nan]] isEqual:[self.factory nan]]);
     id<SuperComplex> r = [self.factory real:1];
     XCTAssert([[self.zero mul:r] isEqual:self.zero]);
-    id<SuperComplex> c = [self.factory real:[self.factory real:1] image:[self.factory real:2]];
+    id<SuperComplex> c = [self.factory real:r image:[self.factory real:2]];
     XCTAssert([[self.zero mul:c] isEqual:self.zero]);
 }
 
 - (void)testDiv {
-    
+    XCTAssert([[self.zero div:[self.factory zero]] isEqual:self.zero]);
+    XCTAssert([[self.zero div:[self.factory nan]] isEqual:[self.factory nan]]);
+    id<SuperComplex> r = [self.factory real:1];
+    XCTAssert([[self.zero div:r] isEqual:self.zero]);
+    id<SuperComplex> c = [self.factory real:r image:[self.factory real:2]];
+    XCTAssert([[self.zero div:c] isEqual:self.zero]);
 }
 
 - (void)testPerformanceExample {

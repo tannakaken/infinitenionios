@@ -27,12 +27,18 @@
 
 - (nonnull id<SuperComplex>)real:(nonnull id<SuperComplex>)real
                            image:(nonnull id<SuperComplex>)image {
+    return [self real:real image:image height:MAX(real.height, image.height)+1];
+}
+
+- (nonnull id<SuperComplex>)real:(id<SuperComplex>)real
+                           image:(id<SuperComplex>)image
+                          height:(NSUInteger)height {
     if (real.isNaN || image.isNaN) {
         return [self nan];
     }
     id<SuperComplex> superComplex = [[CayleyDickson alloc] initWithReal:real
                                                               withImage:image
-                                                             withHeight:MAX(real.height,image.height)+1];
+                                                             withHeight:height];
     return [self simplify:superComplex];
 }
 
