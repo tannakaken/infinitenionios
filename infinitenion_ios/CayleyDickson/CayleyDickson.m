@@ -32,7 +32,13 @@ static SuperComplexFactory *factory;
 }
 
 - (nonnull id<SuperComplex>)add:(nonnull id<SuperComplex>)other {
-    return nil;
+    if (self.height < other.height) {
+        return [factory real:[self add:other.real] image:other.image height:other.height];
+    }
+    if (self.height > other.height) {
+        return [factory real:[self.real add:other.real] image:self.image height:self.height];
+    }
+    return [factory real:[self.real add:other.real] image:[self.image add:other.image] height:self.height];
 }
 
 - (nonnull id<SuperComplex>)conj {
@@ -40,7 +46,7 @@ static SuperComplexFactory *factory;
 }
 
 - (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {
-    return nil;
+    return [self mul:other.inverse];
 }
 
 - (nonnull id<SuperComplex>)mul:(nonnull id<SuperComplex>)other {
@@ -68,7 +74,7 @@ static SuperComplexFactory *factory;
 }
 
 - (nonnull id<SuperComplex>)negate {
-    return [factory real:self.real.negate image:self.image.negate];
+    return [factory real:self.real.negate image:self.image.negate height:self.height];
 }
 
 - (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {

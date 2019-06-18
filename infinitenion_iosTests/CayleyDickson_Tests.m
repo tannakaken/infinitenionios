@@ -9,19 +9,19 @@
 #import <XCTest/XCTest.h>
 #import "SuperComplexFactory.h"
 
-@interface infinitenion_iosTests : XCTestCase
+@interface CayleyDickson_Tests : XCTestCase
 
 @end
 
-@implementation infinitenion_iosTests {
+@implementation CayleyDickson_Tests {
     SuperComplexFactory *factory;
     id<SuperComplex> zero;
     id<SuperComplex> nan;
     id<SuperComplex> one;
+    id<SuperComplex> two;
     id<SuperComplex> minusOne;
-    id<SuperComplex> i;
-    id<SuperComplex> j;
-    id<SuperComplex> k;
+    id<SuperComplex> i,j,k,l,m,n,o;
+    NSMutableArray<id<SuperComplex>> *imaginaries;
 }
 
 - (void)setUp {
@@ -30,20 +30,28 @@
     zero = [factory zero];
     nan = [factory nan];
     one = [factory real:1];
+    two = [factory real:2];
     minusOne = [factory real:-1];
-    i = [factory real:zero image:one];
-    j = [factory real:zero image:one height:2];
-    k = [factory real:zero image:i];
+    i = [factory imaginaryUnitOfNth:1];
+    j = [factory imaginaryUnitOfNth:2];
+    k = [factory imaginaryUnitOfNth:3];
+    l = [factory imaginaryUnitOfNth:4];
+    m = [factory imaginaryUnitOfNth:5];
+    n = [factory imaginaryUnitOfNth:6];
+    o = [factory imaginaryUnitOfNth:7];
+    imaginaries = [NSMutableArray new];
+    for (int i = 0; i < 16; ++i) {
+        [imaginaries addObject:[factory imaginaryUnitOfNth:i]];
+    }
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testI {
-    XCTAssert([[i mul:i] isEqual:minusOne]);
-    XCTAssert([[j mul:j] isEqual:minusOne]);
-    XCTAssert([[k mul:k] isEqual:minusOne]);
+- (void)testComplex {
+    id<SuperComplex> diagonal = [one add:i];
+    XCTAssert([[diagonal mul:diagonal] isEqual:[two mul:i]]);
 }
 
 - (void)testQuartanion {
@@ -52,10 +60,16 @@
     XCTAssert([[k mul:i].negate isEqual:[i mul:k]]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
+- (void)testSedenion {
+    XCTAssert([[[imaginaries[3] add:imaginaries[10]] mul:[imaginaries[6] sub:imaginaries[15]]] isEqual:zero]);
+}
+
+- (void)testImaginaryWithPerformance {
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        for (NSUInteger i = 1; i < 4096; ++i) {
+            id<SuperComplex> imaginary = [self->factory imaginaryUnitOfNth:i];
+            XCTAssert([[imaginary mul:imaginary] isEqual:self->minusOne]);
+        }
     }];
 }
 

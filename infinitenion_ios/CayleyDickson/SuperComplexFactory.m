@@ -60,6 +60,19 @@
                                     withHeight:superComplex.height];
 }
 
+- (nonnull id<SuperComplex>)imaginaryUnitOfNth:(NSUInteger)nth {
+    if (nth == 0) {
+        return [self real:1];
+    }
+    NSUInteger height = 0;
+    NSUInteger width = 1;
+    while (width <= nth) {
+        ++height;
+        width *= 2;
+    }
+    return [self real:[self zero] image:[self imaginaryUnitOfNth:nth - width/2] height:height];
+}
+
 static SuperComplexFactory *singleton = nil;
 
 + (instancetype) getInstance{

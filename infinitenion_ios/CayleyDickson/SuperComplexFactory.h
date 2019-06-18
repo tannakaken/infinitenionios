@@ -18,6 +18,7 @@
 - (nonnull id<SuperComplex>)real:(nonnull id<SuperComplex>)real
                            image:(nonnull id<SuperComplex>)image
                           height:(NSUInteger)height;
+- (nonnull id<SuperComplex>)imaginaryUnitOfNth:(NSUInteger)nth;
 + (nonnull instancetype)getInstance;
 @end
 #endif /* SuperComplexFactory_h */
