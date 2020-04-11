@@ -12,6 +12,9 @@
 @implementation SuperComplexParser
 
 - (id<SuperComplex>)parse:(NSString *)input {
+    if ([input isEqualToString:@"nan"]) {
+        return [SuperComplexFactory.getInstance nan];
+    }
     return [SuperComplexFactory.getInstance real:[input doubleValue]];
 }
 
