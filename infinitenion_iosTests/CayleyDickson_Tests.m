@@ -103,7 +103,7 @@
 
 - (void)testParsing {
     // TODO ここは正しくない github actionsのテスト用
-    XCTAssert([SuperComplexFromString(@"0") isEqual:i]);
+    XCTAssert([SuperComplexFromString(@"E1") isEqual:zero]);
 }
 
 - (void)testImaginaryWithPerformance {
