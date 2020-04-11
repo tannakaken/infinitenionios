@@ -7,11 +7,12 @@
 //
 
 #import "SuperComplexParser.h"
+#import "SuperComplexFactory.h"
 
 @implementation SuperComplexParser
 
 - (id<SuperComplex>)parse:(NSString *)input {
-    return nil;
+    return [SuperComplexFactory.getInstance real:[input doubleValue]];
 }
 
 @end
