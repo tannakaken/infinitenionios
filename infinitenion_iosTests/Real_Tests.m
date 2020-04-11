@@ -161,7 +161,6 @@
 }
 
 - (void)testParsing {
-    NSLog(@"%@", SuperComplexFromString(@"1"));
     XCTAssert([SuperComplexFromString(@"1") isEqual:one]);
     XCTAssert([SuperComplexFromString(@"2") isEqual: two]);
     XCTAssert([SuperComplexFromString(@"-1") isEqual: minusone]);
