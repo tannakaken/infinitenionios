@@ -90,7 +90,6 @@
 }
 
 - (void)testStringifying {
-    XCTAssert([@"0" isEqualToString:zero.description]);
     XCTAssert([@"1" isEqualToString:one.description]);
     XCTAssert([@"E1" isEqualToString:i.description]);
     XCTAssert([@"1 2 E1 * +" isEqualToString:[one add:[i mul:two]].description]);
@@ -100,10 +99,6 @@
     XCTAssert([@"E5" isEqualToString:m.description]);
     XCTAssert([@"E6" isEqualToString:n.description]);
     XCTAssert([@"E7" isEqualToString:o.description]);
-}
-
-- (void)testParsing {
-    XCTAssertEqual(SuperComplexFromString(@"0"), zero);
 }
 
 - (void)testImaginaryWithPerformance {

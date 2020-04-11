@@ -125,4 +125,12 @@
     XCTAssert(isnan(nan.realReal));
 }
 
+- (void)testStringifying {
+    XCTAssert([@"nan" isEqualToString:nan.description]);
+}
+
+- (void)testParsing {
+    XCTAssertEqual(SuperComplexFromString(@"nan"), nan);
+}
+
 @end

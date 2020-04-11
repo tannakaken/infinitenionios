@@ -152,6 +152,23 @@
     XCTAssert([ontherNan isEqual:nan]);
 }
 
+- (void)testStringifying {
+    XCTAssert([@"1" isEqualToString:one.description]);
+    XCTAssert([@"2" isEqualToString:two.description]);
+    XCTAssert([@"-1" isEqualToString:minusone.description]);
+    XCTAssert([@"1.5" isEqualToString:[factory real:1.5].description]);
+    XCTAssert([@"-1.5" isEqualToString:[factory real:-1.5].description]);
+}
+
+- (void)testParsing {
+    NSLog(@"%@", SuperComplexFromString(@"1"));
+    XCTAssert([SuperComplexFromString(@"1") isEqual:one]);
+    XCTAssert([SuperComplexFromString(@"2") isEqual: two]);
+    XCTAssert([SuperComplexFromString(@"-1") isEqual: minusone]);
+    XCTAssert([SuperComplexFromString(@"1.5") isEqual: [factory real:1.5]]);
+    XCTAssert([SuperComplexFromString(@"-1.5") isEqual: [factory real:-1.5]]);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

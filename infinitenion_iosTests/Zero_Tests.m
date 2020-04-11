@@ -117,6 +117,14 @@
     XCTAssertEqual(zero.realReal, 0);
 }
 
+- (void)testStringifying {
+    XCTAssert([@"0" isEqualToString:zero.description]);
+}
+
+- (void)testParsing {
+    XCTAssertEqual(SuperComplexFromString(@"0"), zero);
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
