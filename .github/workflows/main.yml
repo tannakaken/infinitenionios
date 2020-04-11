@@ -17,14 +17,14 @@ jobs:
       # Run build
     - name: Build
       run: xcodebuild
-            -scheme Swift-github-actions
+            -scheme github-actions
             -sdk iphonesimulator
             -configuration Debug
             build
       # Run unit test
     - name: Run tests
       run: xcodebuild
-            -scheme Swift-github-actions
+            -scheme github-actions
             -sdk iphonesimulator
             -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
             clean test
