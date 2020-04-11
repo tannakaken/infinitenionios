@@ -50,7 +50,7 @@
     XCTAssertFalse([one isEqual:two]);
     XCTAssertFalse([one isEqual:zero]);
     XCTAssertFalse([one isEqual:nan]);
-    XCTAssertFalse([one isEqual:[factory real:one image:two]]);
+    XCTAssertFalse([one isEqual:[factory real:one image:two height:1]]);
 }
 
 - (void)testHeight {
@@ -75,8 +75,8 @@
     
     XCTAssert([[one add:nan] isEqual:nan]);
     
-    id<SuperComplex> zeroone = [factory real:zero image:one];
-    id<SuperComplex> oneone = [factory real:one image:one];
+    id<SuperComplex> zeroone = [factory real:zero image:one height:1];
+    id<SuperComplex> oneone = [factory real:one image:one height:1];
     XCTAssert([[one add:zeroone] isEqual:oneone]);
     XCTAssert([[[factory real:-1] add:oneone] isEqual:zeroone]);
 }
@@ -88,8 +88,8 @@
     
     XCTAssert([[minusone sub:nan] isEqual:[factory nan]]);
     
-    id<SuperComplex> minusonetwo = [factory real:minusone image:two];
-    id<SuperComplex> zerominustwo = [factory real:zero image:two.negate];
+    id<SuperComplex> minusonetwo = [factory real:minusone image:two height:1];
+    id<SuperComplex> zerominustwo = [factory real:zero image:two.negate height:1];
     XCTAssert([[minusone sub:minusonetwo] isEqual:zerominustwo]);
 }
 
@@ -99,9 +99,8 @@
     XCTAssert([[two mul:zero] isEqual:zero]);
     XCTAssert([[two mul:nan] isEqual:nan]);
     
-    id<SuperComplex> twothree = [factory real:two image:three];
-    XCTAssert([[two mul:twothree] isEqual:[factory real:[factory real:4] image:[factory real:6]]]);
-    
+    id<SuperComplex> twothree = [factory real:two image:three height:1];
+    XCTAssert([[two mul:twothree] isEqual:[factory real:[factory real:4] image:[factory real:6] height:1]]);
 }
 
 - (void)testDiv {
@@ -110,7 +109,7 @@
     XCTAssert([[two div:zero] isEqual:nan]);
     XCTAssert([[two div:nan] isEqual:nan]);
     
-    id<SuperComplex> oneone = [factory real:one image:one];
+    id<SuperComplex> oneone = [factory real:one image:one height:1];
     XCTAssert([[two div:oneone] isEqual:oneone.conj]);
 }
 

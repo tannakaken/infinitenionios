@@ -29,7 +29,7 @@
     zero = [factory zero];
     one = [factory real:1];
     two = [factory real:2];
-    c = [factory real:one image:two];
+    c = [factory real:one image:two height:1];
 }
 
 - (void)tearDown {
@@ -47,7 +47,7 @@
 - (void)testNotEqual {
     XCTAssertFalse([nan isEqual:two]);
     XCTAssertFalse([nan isEqual:zero]);
-    XCTAssertFalse([nan isEqual:[factory real:two image:one]]);
+    XCTAssertFalse([nan isEqual:[factory real:two image:one height:1]]);
 }
 
 - (void)testHeight {
