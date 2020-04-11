@@ -102,8 +102,8 @@
 }
 
 - (void)testParsing {
-    NSLog(@"%@", SuperComplexFromString(@"E1"));
-    XCTAssert([SuperComplexFromString(@"E1") isEqual:i]);
+    // TODO ここは正しくない github actionsのテスト用
+    XCTAssert([SuperComplexFromString(@"0") isEqual:i]);
 }
 
 - (void)testImaginaryWithPerformance {
