@@ -41,7 +41,7 @@ static SuperComplexFactory *factory;
     if (other.height == 0) {
         return [factory real:self.value + other.realReal];
     }
-    return [factory real:[self add:other.real] image:other.image];
+    return [factory real:[self add:other.real] image:other.image height:other.height];
 }
 
 - (nonnull id<SuperComplex>)sub:(nonnull id<SuperComplex>)other {
@@ -52,7 +52,7 @@ static SuperComplexFactory *factory;
     if (other.height == 0) {
         return [factory real:self.value * other.realReal];
     }
-    return [factory real:[self mul:other.real] image:[self mul:other.image]];
+    return [factory real:[self mul:other.real] image:[self mul:other.image] height:other.height];
 }
 
 - (nonnull id<SuperComplex>)div:(nonnull id<SuperComplex>)other {

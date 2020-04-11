@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EF7EF9324017CA500E0A522 /* CayleyDicksonStringifyer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7EF9224017CA500E0A522 /* CayleyDicksonStringifyer.m */; };
 		4026182722B478F8009F531B /* Zero_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182622B478F8009F531B /* Zero_Tests.m */; };
 		4026182922B66B3D009F531B /* NaN_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182822B66B3D009F531B /* NaN_Tests.m */; };
 		406F6BD922A0EC30001D7D07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BD822A0EC30001D7D07 /* AppDelegate.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EF7EF9224017CA500E0A522 /* CayleyDicksonStringifyer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CayleyDicksonStringifyer.m; sourceTree = "<group>"; };
+		2EF7EF9424017CC700E0A522 /* CayleyDicksonStringifyer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CayleyDicksonStringifyer.h; sourceTree = "<group>"; };
 		4026182622B478F8009F531B /* Zero_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zero_Tests.m; sourceTree = "<group>"; };
 		4026182822B66B3D009F531B /* NaN_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaN_Tests.m; sourceTree = "<group>"; };
 		406F6BD422A0EC30001D7D07 /* infinitenion_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infinitenion_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +175,8 @@
 				406F6C1922B0098E001D7D07 /* NaN.m */,
 				406F6C1B22B0F4B9001D7D07 /* SuperComplexFactory.h */,
 				406F6C1C22B0F655001D7D07 /* SuperComplexFactory.m */,
+				2EF7EF9224017CA500E0A522 /* CayleyDicksonStringifyer.m */,
+				2EF7EF9424017CC700E0A522 /* CayleyDicksonStringifyer.h */,
 			);
 			path = CayleyDickson;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				406F6C1422A42E37001D7D07 /* Zero.m in Sources */,
 				406F6C0B22A0EDEE001D7D07 /* CayleyDickson.m in Sources */,
 				406F6C1A22B0098E001D7D07 /* NaN.m in Sources */,
+				2EF7EF9324017CA500E0A522 /* CayleyDicksonStringifyer.m in Sources */,
 				406F6BDC22A0EC30001D7D07 /* ViewController.m in Sources */,
 				406F6BE722A0EC31001D7D07 /* main.m in Sources */,
 				406F6BD922A0EC30001D7D07 /* AppDelegate.m in Sources */,

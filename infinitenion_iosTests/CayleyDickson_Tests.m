@@ -58,10 +58,48 @@
     XCTAssert([[i mul:j].negate isEqual:[j mul:i]]);
     XCTAssert([[j mul:k].negate isEqual:[k mul:j]]);
     XCTAssert([[k mul:i].negate isEqual:[i mul:k]]);
+    XCTAssert([[[i mul:j] mul:k] isEqual:minusOne]);
+}
+
+- (void)testOctonion {
+    NSMutableString *table = [NSMutableString stringWithString:@"\n |"];
+    for (int i = 0; i < 8; ++i) {
+        [table appendFormat:@"      %d|", i];
+    }
+    [table appendString:@"\n"];
+    for (int i = 0; i < 8; ++i) {
+        [table appendFormat:@"%d|", i];
+        id<SuperComplex> a = [factory imaginaryUnitOfNth:i];
+        for (int j = 0; j < 8; ++ j) {
+            id<SuperComplex> b = [factory imaginaryUnitOfNth:j];
+            id<SuperComplex> mul = [a mul:b];
+            [table appendFormat:@"%7s|", mul.description.UTF8String];
+        }
+        [table appendString:@"\n"];
+    }
+    NSLog(@"%@", table);
+    id<SuperComplex> a = [one mul:l];
+    NSLog(@"%@", a.real);
+    NSLog(@"%@", a.image);
+    NSLog(@"%lu", a.height);
+    XCTAssert([[[i mul:j] mul:l].negate isEqual:[i mul:[j mul:l]]]);
 }
 
 - (void)testSedenion {
     XCTAssert([[[imaginaries[3] add:imaginaries[10]] mul:[imaginaries[6] sub:imaginaries[15]]] isEqual:zero]);
+}
+
+- (void)testStringifying {
+    XCTAssert([@"0" isEqualToString:zero.description]);
+    XCTAssert([@"1" isEqualToString:one.description]);
+    XCTAssert([@"E1" isEqualToString:i.description]);
+    XCTAssert([@"1 2 E1 * +" isEqualToString:[one add:[i mul:two]].description]);
+    XCTAssert([@"E2" isEqualToString:j.description]);
+    XCTAssert([@"E3" isEqualToString:k.description]);
+    XCTAssert([@"E4" isEqualToString:l.description]);
+    XCTAssert([@"E5" isEqualToString:m.description]);
+    XCTAssert([@"E6" isEqualToString:n.description]);
+    XCTAssert([@"E7" isEqualToString:o.description]);
 }
 
 - (void)testImaginaryWithPerformance {
@@ -72,5 +110,7 @@
         }
     }];
 }
+
+
 
 @end
