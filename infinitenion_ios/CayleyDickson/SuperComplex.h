@@ -28,4 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (double)realReal;
 @end
 
+id<SuperComplex> SuperComplexFromString(NSString *input);
+
 NS_ASSUME_NONNULL_END

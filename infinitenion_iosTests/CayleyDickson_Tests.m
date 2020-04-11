@@ -102,6 +102,10 @@
     XCTAssert([@"E7" isEqualToString:o.description]);
 }
 
+- (void)testParsing {
+    XCTAssertEqual(SuperComplexFromString(@"0"), zero);
+}
+
 - (void)testImaginaryWithPerformance {
     [self measureBlock:^{
         for (NSUInteger i = 1; i < 4096; ++i) {

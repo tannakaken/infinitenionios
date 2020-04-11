@@ -6,10 +6,10 @@
 //  Copyright © 2020 Kensaku Tanaka. All rights reserved.
 //
 
-#import "CayleyDicksonStringifyer.h"
+#import "SuperComplexStringifyer.h"
 #import "math.h"
 
-@implementation CayleyDicksonStringifyer
+@implementation SuperComplexStringifyer
 
 - (NSString *)stringify:(id<SuperComplex>)complex {
     return [self stringify:complex withIndex:0];

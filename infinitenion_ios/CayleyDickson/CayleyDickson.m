@@ -8,7 +8,7 @@
 
 #import "CayleyDickson.h"
 #import "SuperComplexFactory.h"
-#import "CayleyDicksonStringifyer.h"
+#import "SuperComplexStringifyer.h"
 
 @implementation CayleyDickson
 
@@ -103,8 +103,8 @@ static SuperComplexFactory *factory;
 }
 
 - (NSString *)description {
-    CayleyDicksonStringifyer *v = [CayleyDicksonStringifyer new];
-    return [v stringify:self];
+    SuperComplexStringifyer *stringifyer = [SuperComplexStringifyer new];
+    return [stringifyer stringify:self];
 }
 
 - (BOOL)isEqual:(id)object {
