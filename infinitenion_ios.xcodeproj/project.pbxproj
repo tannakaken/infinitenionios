@@ -45,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E3303CA2441C60D004A6C6D /* SuperComplexParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperComplexParser.h; sourceTree = "<group>"; };
 		2E3303CB2441C7B5004A6C6D /* SuperComplexParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperComplexParser.m; sourceTree = "<group>"; };
 		2EF7EF9224017CA500E0A522 /* SuperComplexStringifyer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperComplexStringifyer.m; sourceTree = "<group>"; };
 		2EF7EF9424017CC700E0A522 /* SuperComplexStringifyer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperComplexStringifyer.h; sourceTree = "<group>"; };
@@ -180,7 +179,6 @@
 				406F6C1C22B0F655001D7D07 /* SuperComplexFactory.m */,
 				2EF7EF9224017CA500E0A522 /* SuperComplexStringifyer.m */,
 				2EF7EF9424017CC700E0A522 /* SuperComplexStringifyer.h */,
-				2E3303CA2441C60D004A6C6D /* SuperComplexParser.h */,
 				2E3303CB2441C7B5004A6C6D /* SuperComplexParser.m */,
 			);
 			path = CayleyDickson;
