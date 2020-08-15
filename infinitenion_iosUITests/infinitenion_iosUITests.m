@@ -30,9 +30,38 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testSimpleCalculation {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *inputTextField = app.textFields[@"InputTextField"];
+    [inputTextField tap];
+    [inputTextField typeText:@"1 2 +"];
+    [app.buttons[@"Return"] tap];
+    XCUIElement *calcButton = app.buttons[@"CalcButton"];
+    [calcButton tap];
+    XCTAssert([inputTextField.value isEqualToString:@"3"]);
 }
+
+- (void)testComplexCalculation {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *inputTextField = app.textFields[@"InputTextField"];
+    [inputTextField tap];
+    [inputTextField typeText:@"E1 E1 *"];
+    [app.buttons[@"Return"] tap];
+    XCUIElement *calcButton = app.buttons[@"CalcButton"];
+    [calcButton tap];
+    XCTAssert([inputTextField.value isEqualToString:@"-1"]);
+}
+
+- (void)testSedenionCalculation {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *inputTextField = app.textFields[@"InputTextField"];
+    [inputTextField tap];
+    [inputTextField typeText:@" E3  E10 + E6 E15 - *"];
+    [app.buttons[@"Return"] tap];
+    XCUIElement *calcButton = app.buttons[@"CalcButton"];
+    [calcButton tap];
+    XCTAssert([inputTextField.value isEqualToString:@"0"]);
+}
+
 
 @end
