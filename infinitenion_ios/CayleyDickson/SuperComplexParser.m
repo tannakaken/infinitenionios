@@ -33,7 +33,10 @@
         }
         [self cutoutToken];
     }
-    if (self.stack.count > 1) {
+    if (self.stack == nil) {
+        return nil;
+    }
+    if (self.stack.count != 1) {
         return nil;
     }
     return self.stack.firstObject;
@@ -67,27 +70,28 @@
 }
 
 - (void)cutoutToken {
+    [self jumpSpace];
     switch (self.head) {
         case '+': {
-            if ('0' < self.next && self.next < '9') {
-                break;
+            if ('0' <= self.next && self.next <= '9') {
+                [self cutoutReal];
+                return;
             }
             id<SuperComplex> last = [self pop];
             id<SuperComplex> penulutimate = [self pop];
             [self.stack addObject:[penulutimate add:last]];
             [self step];
-            [self jumpSpace];
             return;
         }
         case '-': {
-            if ('0' < self.next && self.next < '9') {
-                break;
+            if ('0' <= self.next && self.next <= '9') {
+                [self cutoutReal];
+                return;
             }
             id<SuperComplex> last = [self pop];
             id<SuperComplex> penulutimate = [self pop];
             [self.stack addObject:[penulutimate sub:last]];
             [self step];
-            [self jumpSpace];
             return;
         }
         case '*': {
@@ -95,7 +99,6 @@
             id<SuperComplex> penulutimate = [self pop];
             [self.stack addObject:[penulutimate mul:last]];
             [self step];
-            [self jumpSpace];
             return;
         }
         case '/': {
@@ -103,19 +106,16 @@
             id<SuperComplex> penulutimate = [self pop];
             [self.stack addObject:[penulutimate div:last]];
             [self step];
-            [self jumpSpace];
+            return;
+        }
+        case 'E': {
+            [self step];
+            [self cutoutImaginaryUnit:@""];
             return;
         }
         default:
-            break;
-    }
-    if (self.head == 'E') {
-        self.restOfInput = [self.restOfInput substringFromIndex:1];
-        [self cutoutImaginaryUnit:@""];
-        [self jumpSpace];
-    } else {
-        [self cutoutReal];
-        [self jumpSpace];
+            [self cutoutReal];
+            return;
     }
 }
 
@@ -127,13 +127,16 @@
 
 - (void)cutoutReal {
     unichar head = self.head;
-    [self step];
     if (head == '+') {
+        [self step];
         [self cutoutPositiveReal:@"" withPeriod:false];
     } else if (head == '-') {
+        [self step];
         [self cutoutPositiveReal:@"" withPeriod:false];
         id<SuperComplex> last = [self pop];
         [self.stack addObject:last.negate];
+    } else {
+        [self cutoutPositiveReal:@"" withPeriod:false];
     }
 }
 
