@@ -105,6 +105,7 @@
     XCTAssert([SuperComplexFromString(@"E1") isEqual:i]);
     XCTAssert([SuperComplexFromString(@"E2") isEqual:j]);
     XCTAssert([SuperComplexFromString(@"E1 E2 +") isEqual:[i add:j]]);
+    XCTAssert([SuperComplexFromString(@"2 E2 *") isEqual:[two mul:j]]);
 }
 
 - (void)testImaginaryWithPerformance {

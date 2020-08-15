@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E25737F24E7807600F1CA9B /* Calc_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25737E24E7807600F1CA9B /* Calc_Test.m */; };
 		2E3303CC2441C7B5004A6C6D /* SuperComplexParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3303CB2441C7B5004A6C6D /* SuperComplexParser.m */; };
 		2EF7EF9324017CA500E0A522 /* SuperComplexStringifyer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7EF9224017CA500E0A522 /* SuperComplexStringifyer.m */; };
 		4026182722B478F8009F531B /* Zero_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182622B478F8009F531B /* Zero_Tests.m */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E25737E24E7807600F1CA9B /* Calc_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calc_Test.m; sourceTree = "<group>"; };
 		2E3303CB2441C7B5004A6C6D /* SuperComplexParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperComplexParser.m; sourceTree = "<group>"; };
 		2EF7EF9224017CA500E0A522 /* SuperComplexStringifyer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperComplexStringifyer.m; sourceTree = "<group>"; };
 		2EF7EF9424017CC700E0A522 /* SuperComplexStringifyer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperComplexStringifyer.h; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				406F6C1522A77C09001D7D07 /* Real_Tests.m */,
 				4026182622B478F8009F531B /* Zero_Tests.m */,
 				4026182822B66B3D009F531B /* NaN_Tests.m */,
+				2E25737E24E7807600F1CA9B /* Calc_Test.m */,
 			);
 			path = infinitenion_iosTests;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				406F6BF122A0EC32001D7D07 /* CayleyDickson_Tests.m in Sources */,
 				4026182922B66B3D009F531B /* NaN_Tests.m in Sources */,
+				2E25737F24E7807600F1CA9B /* Calc_Test.m in Sources */,
 				406F6C1622A77C09001D7D07 /* Real_Tests.m in Sources */,
 				4026182722B478F8009F531B /* Zero_Tests.m in Sources */,
 			);
