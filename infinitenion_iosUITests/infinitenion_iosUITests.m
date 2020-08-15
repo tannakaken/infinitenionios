@@ -63,5 +63,18 @@
     XCTAssert([inputTextField.value isEqualToString:@"0"]);
 }
 
+- (void)testErrorCalculation {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *inputTextField = app.textFields[@"InputTextField"];
+    [inputTextField tap];
+    [inputTextField typeText:@"qqqqq"];
+    [app.buttons[@"Return"] tap];
+    XCUIElement *calcButton = app.buttons[@"CalcButton"];
+    [calcButton tap];
+    XCTAssert([inputTextField.value isEqualToString:@""]);
+}
+
+
+
 
 @end
