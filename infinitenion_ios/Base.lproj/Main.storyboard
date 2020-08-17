@@ -35,13 +35,13 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sm4-5v-t5I">
-                                <rect key="frame" x="0.0" y="86" width="414" height="776"/>
+                                <rect key="frame" x="0.0" y="86" width="414" height="726"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sm4-5v-t5I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Hsw-a7-eoa"/>
+                            <constraint firstItem="sm4-5v-t5I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="Hsw-a7-eoa"/>
                             <constraint firstItem="v91-Hf-aPR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="NB4-jM-CZ2"/>
                             <constraint firstItem="0eK-18-EHm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NKr-TF-5QD"/>
                             <constraint firstItem="0eK-18-EHm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VSF-bM-evQ"/>
