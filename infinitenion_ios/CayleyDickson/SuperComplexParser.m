@@ -108,7 +108,7 @@
             [self step];
             return;
         }
-        case 'E': {
+        case 'e': {
             [self step];
             [self cutoutImaginaryUnit:@""];
             return;

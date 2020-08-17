@@ -91,21 +91,21 @@
 
 - (void)testStringifying {
     XCTAssert([@"1" isEqualToString:one.description]);
-    XCTAssert([@"E1" isEqualToString:i.description]);
-    XCTAssert([@"1 2 E1 * +" isEqualToString:[one add:[i mul:two]].description]);
-    XCTAssert([@"E2" isEqualToString:j.description]);
-    XCTAssert([@"E3" isEqualToString:k.description]);
-    XCTAssert([@"E4" isEqualToString:l.description]);
-    XCTAssert([@"E5" isEqualToString:m.description]);
-    XCTAssert([@"E6" isEqualToString:n.description]);
-    XCTAssert([@"E7" isEqualToString:o.description]);
+    XCTAssert([@"e1" isEqualToString:i.description]);
+    XCTAssert([@"1 2 e1 * +" isEqualToString:[one add:[i mul:two]].description]);
+    XCTAssert([@"e2" isEqualToString:j.description]);
+    XCTAssert([@"e3" isEqualToString:k.description]);
+    XCTAssert([@"e4" isEqualToString:l.description]);
+    XCTAssert([@"e5" isEqualToString:m.description]);
+    XCTAssert([@"e6" isEqualToString:n.description]);
+    XCTAssert([@"e7" isEqualToString:o.description]);
 }
 
 - (void)testParsing {
-    XCTAssert([SuperComplexFromString(@"E1") isEqual:i]);
-    XCTAssert([SuperComplexFromString(@"E2") isEqual:j]);
-    XCTAssert([SuperComplexFromString(@"E1 E2 +") isEqual:[i add:j]]);
-    XCTAssert([SuperComplexFromString(@"2 E2 *") isEqual:[two mul:j]]);
+    XCTAssert([SuperComplexFromString(@"e1") isEqual:i]);
+    XCTAssert([SuperComplexFromString(@"e2") isEqual:j]);
+    XCTAssert([SuperComplexFromString(@"e1 e2 +") isEqual:[i add:j]]);
+    XCTAssert([SuperComplexFromString(@"2 e2 *") isEqual:[two mul:j]]);
 }
 
 - (void)testImaginaryWithPerformance {

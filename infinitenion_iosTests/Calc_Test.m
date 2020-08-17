@@ -50,10 +50,10 @@
 }
 
 - (void)testCalc {
-    XCTAssert([SuperComplexFromString(@"E1 E1 *") isEqual:minusOne]);
-    XCTAssert([SuperComplexFromString(@"E1 E2 *") isEqual:k]);
-    XCTAssert([SuperComplexFromString(@"E2 E1 *") isEqual:k.negate]);
-    XCTAssert([SuperComplexFromString(@"E3 E10 + E6 E15 - *") isEqual:zero]);
+    XCTAssert([SuperComplexFromString(@"e1 e1 *") isEqual:minusOne]);
+    XCTAssert([SuperComplexFromString(@"e1 e2 *") isEqual:k]);
+    XCTAssert([SuperComplexFromString(@"e2 e1 *") isEqual:k.negate]);
+    XCTAssert([SuperComplexFromString(@"e3 e10 + e6 e15 - *") isEqual:zero]);
 }
 
 @end

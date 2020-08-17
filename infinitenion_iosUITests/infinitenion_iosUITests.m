@@ -45,7 +45,7 @@
     XCUIApplication *app = [[XCUIApplication alloc] init];
     XCUIElement *inputTextField = app.textFields[@"InputTextField"];
     [inputTextField tap];
-    [inputTextField typeText:@"E1 E1 *"];
+    [inputTextField typeText:@"e1 e1 *"];
     [app.buttons[@"Return"] tap];
     XCUIElement *calcButton = app.buttons[@"CalcButton"];
     [calcButton tap];
@@ -56,7 +56,7 @@
     XCUIApplication *app = [[XCUIApplication alloc] init];
     XCUIElement *inputTextField = app.textFields[@"InputTextField"];
     [inputTextField tap];
-    [inputTextField typeText:@" E3  E10 + E6 E15 - *"];
+    [inputTextField typeText:@" e3  e10 + e6 e15 - *"];
     [app.buttons[@"Return"] tap];
     XCUIElement *calcButton = app.buttons[@"CalcButton"];
     [calcButton tap];
@@ -71,7 +71,7 @@
     [app.buttons[@"Return"] tap];
     XCUIElement *calcButton = app.buttons[@"CalcButton"];
     [calcButton tap];
-    XCTAssert([inputTextField.value isEqualToString:@""]);
+    XCTAssert([inputTextField.value isEqualToString:@"1 1 + e1 *"]); // placeholder
 }
 
 

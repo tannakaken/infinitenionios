@@ -28,9 +28,9 @@ NSUInteger pow2(NSUInteger n) {
             if ([term isEqualToString:@"0"]) {
                 return @"0";
             } else if ([term isEqualToString:@"1"]) {
-                return [NSString stringWithFormat:@"E%ld", index];
+                return [NSString stringWithFormat:@"e%ld", index];
             } else {
-                return [NSString stringWithFormat:@"%@ E%ld *", term, index];
+                return [NSString stringWithFormat:@"%@ e%ld *", term, index];
                 
             }
         }
