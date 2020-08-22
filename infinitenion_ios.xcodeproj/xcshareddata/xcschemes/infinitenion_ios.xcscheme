@@ -97,6 +97,13 @@
             ReferencedContainer = "container:infinitenion_ios.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "GOOGLE_API_ENABLE"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
