@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1 1 + e1 *" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0eK-18-EHm">
-                                <rect key="frame" x="20" y="44" width="334" height="34"/>
+                                <rect key="frame" x="20" y="92" width="334" height="34"/>
                                 <accessibility key="accessibilityConfiguration" identifier="InputTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v91-Hf-aPR">
-                                <rect key="frame" x="362" y="48" width="32" height="30"/>
+                                <rect key="frame" x="362" y="96" width="32" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="CalcButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lGV-HX-3Dt"/>
@@ -35,24 +35,37 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sm4-5v-t5I">
-                                <rect key="frame" x="0.0" y="86" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="134" width="414" height="629"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Gv-fK-u0a">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="超実数電卓Infinitenion" id="MCL-jq-QXI">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="7vg-sQ-j17"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0Gv-fK-u0a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6sd-Vp-f3W"/>
                             <constraint firstItem="sm4-5v-t5I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="Hsw-a7-eoa"/>
-                            <constraint firstItem="v91-Hf-aPR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="NB4-jM-CZ2"/>
                             <constraint firstItem="0eK-18-EHm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NKr-TF-5QD"/>
-                            <constraint firstItem="0eK-18-EHm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VSF-bM-evQ"/>
                             <constraint firstItem="sm4-5v-t5I" firstAttribute="top" secondItem="0eK-18-EHm" secondAttribute="bottom" constant="8" id="Vdp-fB-tGF"/>
+                            <constraint firstItem="0eK-18-EHm" firstAttribute="top" secondItem="0Gv-fK-u0a" secondAttribute="bottom" constant="4" id="YAh-74-4my"/>
                             <constraint firstItem="v91-Hf-aPR" firstAttribute="leading" secondItem="0eK-18-EHm" secondAttribute="trailing" constant="8" id="Zoj-wT-pqw"/>
+                            <constraint firstItem="v91-Hf-aPR" firstAttribute="top" secondItem="0Gv-fK-u0a" secondAttribute="bottom" constant="8" id="bVO-4q-FWD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sm4-5v-t5I" secondAttribute="trailing" id="frL-R8-1tI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v91-Hf-aPR" secondAttribute="trailing" constant="20" id="mDL-XO-Zbr"/>
                             <constraint firstItem="sm4-5v-t5I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v53-2h-6Gf"/>
+                            <constraint firstItem="0Gv-fK-u0a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w7O-Um-vlD"/>
+                            <constraint firstItem="0Gv-fK-u0a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yMu-9a-fEW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="historyTableView" destination="sm4-5v-t5I" id="hZS-lW-grQ"/>
                         <outlet property="inputTextField" destination="0eK-18-EHm" id="2ex-h0-hIa"/>
@@ -63,4 +76,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+    </resources>
 </document>
