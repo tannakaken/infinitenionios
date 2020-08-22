@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2E25737F24E7807600F1CA9B /* Calc_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25737E24E7807600F1CA9B /* Calc_Test.m */; };
-		2E25738124EA87DD00F1CA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E25738024EA87DD00F1CA9B /* GoogleService-Info.plist */; };
 		2E3303CC2441C7B5004A6C6D /* SuperComplexParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3303CB2441C7B5004A6C6D /* SuperComplexParser.m */; };
 		2EF7EF9324017CA500E0A522 /* SuperComplexStringifyer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7EF9224017CA500E0A522 /* SuperComplexStringifyer.m */; };
 		4026182722B478F8009F531B /* Zero_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182622B478F8009F531B /* Zero_Tests.m */; };
@@ -348,7 +347,6 @@
 				406F6BE422A0EC31001D7D07 /* LaunchScreen.storyboard in Resources */,
 				406F6BE122A0EC31001D7D07 /* Assets.xcassets in Resources */,
 				406F6BDF22A0EC30001D7D07 /* Main.storyboard in Resources */,
-				2E25738124EA87DD00F1CA9B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ntouch $SRCROOT/infinitenion_ios/GoogleService-Info.plist\n\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp \"${PROJECT_DIR}/infinitenion_ios/GoogleService-Info.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n";
 		};
 		58C4DC12BF6B1DE51AD2DC56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
