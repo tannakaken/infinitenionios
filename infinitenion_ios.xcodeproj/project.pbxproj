@@ -404,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp \"${PROJECT_DIR}/infinitenion_ios/GoogleService-Info.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ -e \"${PROJECT_DIR}/infinitenion_ios/GoogleService-Info.plist\" ];then\n    cp \"${PROJECT_DIR}/infinitenion_ios/GoogleService-Info.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\nfi\n";
 		};
 		58C4DC12BF6B1DE51AD2DC56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
