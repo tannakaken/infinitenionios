@@ -3,8 +3,7 @@ platform :ios, '12.2'
 
 target 'infinitenion_ios' do
   # Comment the next line if you don't want to use dynamic frameworks
-  #use_frameworks!
-  use_modular_headers!
+  use_frameworks!
   pod 'Firebase/Analytics'
   pod 'Firebase/AdMob'
 
