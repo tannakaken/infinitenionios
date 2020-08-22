@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F5B938B535344ABE51EB98F /* Pods_infinitenion_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC3989E33632B37944E99AE /* Pods_infinitenion_ios.framework */; };
-		10F892682896016352B5F0E1 /* Pods_infinitenion_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24BCD56DAED48B5A86392154 /* Pods_infinitenion_iosTests.framework */; };
+		134069DF714D40100DEA13D8 /* libPods-infinitenion_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80EADA5CFFD9A2C5946C2BFB /* libPods-infinitenion_ios.a */; };
 		2E25737F24E7807600F1CA9B /* Calc_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25737E24E7807600F1CA9B /* Calc_Test.m */; };
 		2E25738124EA87DD00F1CA9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E25738024EA87DD00F1CA9B /* GoogleService-Info.plist */; };
 		2E3303CC2441C7B5004A6C6D /* SuperComplexParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3303CB2441C7B5004A6C6D /* SuperComplexParser.m */; };
 		2EF7EF9324017CA500E0A522 /* SuperComplexStringifyer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7EF9224017CA500E0A522 /* SuperComplexStringifyer.m */; };
-		303712CE89F9884C8C2469F5 /* Pods_infinitenion_ios_infinitenion_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 109AA7A6D8F5C05DCD6FFB3B /* Pods_infinitenion_ios_infinitenion_iosUITests.framework */; };
 		4026182722B478F8009F531B /* Zero_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182622B478F8009F531B /* Zero_Tests.m */; };
 		4026182922B66B3D009F531B /* NaN_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182822B66B3D009F531B /* NaN_Tests.m */; };
 		406F6BD922A0EC30001D7D07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6BD822A0EC30001D7D07 /* AppDelegate.m */; };
@@ -30,6 +28,8 @@
 		406F6C1622A77C09001D7D07 /* Real_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1522A77C09001D7D07 /* Real_Tests.m */; };
 		406F6C1A22B0098E001D7D07 /* NaN.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1922B0098E001D7D07 /* NaN.m */; };
 		406F6C1D22B0F655001D7D07 /* SuperComplexFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 406F6C1C22B0F655001D7D07 /* SuperComplexFactory.m */; };
+		5DBD36011E87D849F4A2FD16 /* libPods-infinitenion_ios-infinitenion_iosUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F937A84A822625CF771026B8 /* libPods-infinitenion_ios-infinitenion_iosUITests.a */; };
+		D108088B0791FFF57EE9B541 /* libPods-infinitenion_iosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5285AEFB558347D161454FE6 /* libPods-infinitenion_iosTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EC3989E33632B37944E99AE /* Pods_infinitenion_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infinitenion_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		109AA7A6D8F5C05DCD6FFB3B /* Pods_infinitenion_ios_infinitenion_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infinitenion_ios_infinitenion_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24BCD56DAED48B5A86392154 /* Pods_infinitenion_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infinitenion_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C1648097F2EAB6ABCB18BF /* Pods-infinitenion_iosTests.github.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitenion_iosTests.github.xcconfig"; path = "Target Support Files/Pods-infinitenion_iosTests/Pods-infinitenion_iosTests.github.xcconfig"; sourceTree = "<group>"; };
 		2E25737E24E7807600F1CA9B /* Calc_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calc_Test.m; sourceTree = "<group>"; };
 		2E25738024EA87DD00F1CA9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -91,11 +88,14 @@
 		406F6C1B22B0F4B9001D7D07 /* SuperComplexFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperComplexFactory.h; sourceTree = "<group>"; };
 		406F6C1C22B0F655001D7D07 /* SuperComplexFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperComplexFactory.m; sourceTree = "<group>"; };
 		4429803A4AAFCE92FBA79464 /* Pods-infinitenion_ios-infinitenion_iosUITests.github.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitenion_ios-infinitenion_iosUITests.github.xcconfig"; path = "Target Support Files/Pods-infinitenion_ios-infinitenion_iosUITests/Pods-infinitenion_ios-infinitenion_iosUITests.github.xcconfig"; sourceTree = "<group>"; };
+		5285AEFB558347D161454FE6 /* libPods-infinitenion_iosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-infinitenion_iosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6368B293C60E7D3AF1BE98B5 /* Pods-infinitenion_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitenion_ios.release.xcconfig"; path = "Target Support Files/Pods-infinitenion_ios/Pods-infinitenion_ios.release.xcconfig"; sourceTree = "<group>"; };
 		66915A8E29D44E78A711EEC4 /* Pods-infinitenion_iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitenion_iosTests.debug.xcconfig"; path = "Target Support Files/Pods-infinitenion_iosTests/Pods-infinitenion_iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69A0230F8CE2B72D147EDB01 /* Pods-infinitenion_ios-infinitenion_iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitenion_ios-infinitenion_iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-infinitenion_ios-infinitenion_iosUITests/Pods-infinitenion_ios-infinitenion_iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		80EADA5CFFD9A2C5946C2BFB /* libPods-infinitenion_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-infinitenion_ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA42E19649D8AE12DC9A162 /* Pods-infinitenion_ios-infinitenion_iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitenion_ios-infinitenion_iosUITests.release.xcconfig"; path = "Target Support Files/Pods-infinitenion_ios-infinitenion_iosUITests/Pods-infinitenion_ios-infinitenion_iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D83F4388596F705763A5246D /* Pods-infinitenion_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitenion_iosTests.release.xcconfig"; path = "Target Support Files/Pods-infinitenion_iosTests/Pods-infinitenion_iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		F937A84A822625CF771026B8 /* libPods-infinitenion_ios-infinitenion_iosUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-infinitenion_ios-infinitenion_iosUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BCEAD09AAD97727BFBCE5F /* Pods-infinitenion_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-infinitenion_ios.debug.xcconfig"; path = "Target Support Files/Pods-infinitenion_ios/Pods-infinitenion_ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F5B938B535344ABE51EB98F /* Pods_infinitenion_ios.framework in Frameworks */,
+				134069DF714D40100DEA13D8 /* libPods-infinitenion_ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10F892682896016352B5F0E1 /* Pods_infinitenion_iosTests.framework in Frameworks */,
+				D108088B0791FFF57EE9B541 /* libPods-infinitenion_iosTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				303712CE89F9884C8C2469F5 /* Pods_infinitenion_ios_infinitenion_iosUITests.framework in Frameworks */,
+				5DBD36011E87D849F4A2FD16 /* libPods-infinitenion_ios-infinitenion_iosUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,9 +229,9 @@
 		70E0C641D77A583F1749D9E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0EC3989E33632B37944E99AE /* Pods_infinitenion_ios.framework */,
-				109AA7A6D8F5C05DCD6FFB3B /* Pods_infinitenion_ios_infinitenion_iosUITests.framework */,
-				24BCD56DAED48B5A86392154 /* Pods_infinitenion_iosTests.framework */,
+				80EADA5CFFD9A2C5946C2BFB /* libPods-infinitenion_ios.a */,
+				F937A84A822625CF771026B8 /* libPods-infinitenion_ios-infinitenion_iosUITests.a */,
+				5285AEFB558347D161454FE6 /* libPods-infinitenion_iosTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,7 +247,6 @@
 				406F6BD022A0EC30001D7D07 /* Sources */,
 				406F6BD122A0EC30001D7D07 /* Frameworks */,
 				406F6BD222A0EC30001D7D07 /* Resources */,
-				7B32A08CA8C09239796ED55C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,7 +284,6 @@
 				406F6BF322A0EC32001D7D07 /* Sources */,
 				406F6BF422A0EC32001D7D07 /* Frameworks */,
 				406F6BF522A0EC32001D7D07 /* Resources */,
-				26E957F9C301F9DEF249E42F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,23 +388,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		26E957F9C301F9DEF249E42F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-infinitenion_ios-infinitenion_iosUITests/Pods-infinitenion_ios-infinitenion_iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-infinitenion_ios-infinitenion_iosUITests/Pods-infinitenion_ios-infinitenion_iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-infinitenion_ios-infinitenion_iosUITests/Pods-infinitenion_ios-infinitenion_iosUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		58C4DC12BF6B1DE51AD2DC56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,23 +408,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B32A08CA8C09239796ED55C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-infinitenion_ios/Pods-infinitenion_ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-infinitenion_ios/Pods-infinitenion_ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-infinitenion_ios/Pods-infinitenion_ios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7E87B8A5E26FC1762A77DEE3 /* [CP] Check Pods Manifest.lock */ = {
