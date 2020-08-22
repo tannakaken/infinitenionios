@@ -8,13 +8,18 @@
 
 #import "ViewController.h"
 #import "SuperComplex.h"
+
+#if GOOGLE_API_ENABLED
 @import GoogleMobileAds;
+#endif
 
 @interface ViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @property (weak, nonatomic) IBOutlet UITableView *historyTableView;
 @property (nonatomic) NSMutableArray<NSString *> *historyArray;
+#if GOOGLE_API_ENABLED
 @property(nonatomic, strong) GADBannerView *bannerView;
+#endif
 @end
 
 @implementation ViewController
@@ -32,6 +37,7 @@
     self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
     //self.bannerView.adUnitID = @"ca-app-pub-2965415045499808/5432997419";
     self.bannerView.rootViewController = self;
+    [self.bannerView loadRequest:[GADRequest request]];
 #endif
 }
 
@@ -91,6 +97,7 @@
     return self.historyArray.count;
 }
 
+#if GOOGLE_API_ENABLED
 - (void)addBannerViewToView:(UIView *)bannerView {
   bannerView.translatesAutoresizingMaskIntoConstraints = NO;
   [self.view addSubview:bannerView];
@@ -111,6 +118,6 @@
                                 constant:0]
                                 ]];
 }
-
+#endif
 
 @end

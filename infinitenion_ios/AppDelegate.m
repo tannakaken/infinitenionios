@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
+
+#if GOOGLE_API_ENABLED
 @import Firebase;
+#endif
 
 @interface AppDelegate ()
 

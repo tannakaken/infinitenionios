@@ -19,7 +19,7 @@ jobs:
       run: pod install
     - name: Build
       run: xcodebuild
-            -scheme infinitenion_ios
+            -scheme github-actions
             -sdk iphonesimulator
             -configuration Debug
             build
