@@ -21,6 +21,7 @@ jobs:
       run: xcodebuild
             -scheme github-actions
             -sdk iphonesimulator
+            -configuration Github
             -workspace "infinitenion_ios.xcworkspace"
             build
       # Run unit test
