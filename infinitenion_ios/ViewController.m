@@ -25,7 +25,7 @@
     self.historyTableView.delegate = self;
     self.historyTableView.dataSource = self;
     self.inputTextField.delegate = self;
-#ifdef GOOGLE_API_ENABLED
+#if GOOGLE_API_ENABLED
     self.bannerView = [[GADBannerView alloc]
         initWithAdSize:kGADAdSizeBanner];
     [self addBannerViewToView:self.bannerView];

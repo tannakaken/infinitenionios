@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-#ifdef GOOGLE_API_ENABLED
+#if GOOGLE_API_ENABLED
     [FIRApp configure];
     // Initialize the Google Mobile Ads SDK.
     [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
