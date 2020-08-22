@@ -17,6 +17,8 @@ jobs:
       # Run build
     - name: Install Cocoapods
       run: pod install
+    - name: create dummy file
+      run: touch infinitenion_ios/GoogleService-Info.plist
     - name: Build
       run: xcodebuild
             -scheme github-actions
