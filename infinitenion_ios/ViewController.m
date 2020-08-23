@@ -109,7 +109,68 @@
 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(nonnull NSIndexPath *)indexPath {
-    NSLog(@"tapped");
+    NSString *history = self.historyArray[indexPath.row];
+    NSArray<NSString *> *parsed = [history componentsSeparatedByString:@"\t"];
+    NSString *message = parsed[1];
+    if (parsed.count > 2) {
+        message = [message stringByAppendingFormat:@"\n\n%@", parsed[2]];
+    }
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:parsed[0]
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *copySource = [UIAlertAction actionWithTitle:@"式をペースト"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action) {
+        [self replace:parsed[0]];
+    }];
+    [alert addAction:copySource];
+    UIAlertAction *copyAnswer = [UIAlertAction actionWithTitle:@"答えをペースト"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action) {
+        [self replace:parsed[1]];
+    }];
+    [alert addAction:copyAnswer];
+    UIAlertAction *memo = [UIAlertAction actionWithTitle:@"メモ"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction *action) {
+        NSString *message = [parsed[0] stringByAppendingFormat:@"\n%@", parsed[1]];
+        UIAlertController *prompt = [UIAlertController alertControllerWithTitle:@"メモを追加"
+                                                                        message:message
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+        [prompt addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+            if (parsed.count > 2) {
+                textField.text = parsed[2];
+            }
+        }];
+        UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction *action) {
+            UITextField *memoTextField = prompt.textFields.firstObject;
+            self.historyArray[indexPath.row] = [NSString stringWithFormat:@"%@\t%@\t%@", parsed[0], parsed[1], memoTextField.text];
+            [self saveHistory];
+        }];
+        [prompt addAction:ok];
+        [self presentViewController:prompt animated:YES completion:nil];
+    }];
+    [alert addAction:memo];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"キャンセル"
+                                                    style:UIAlertActionStyleCancel
+                                                  handler:nil];
+    [alert addAction:cancel];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
+
+- (void) replace:(NSString *)string {
+    UITextRange *range = self.inputTextField.selectedTextRange;
+    NSInteger location = [self.inputTextField offsetFromPosition:self.inputTextField.beginningOfDocument
+                                                      toPosition:range.start];
+    NSInteger length = [self.inputTextField offsetFromPosition:range.start toPosition:range.end];
+    NSRange nsRange = NSMakeRange(location, length);
+    NSString *source = self.inputTextField.text;
+    NSString *result = [source stringByReplacingCharactersInRange:nsRange withString:string];
+    self.inputTextField.text = result;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
