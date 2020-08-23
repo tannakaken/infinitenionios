@@ -98,6 +98,7 @@
     } else {
         cell.detailTextLabel.textColor = UIColor.blackColor;
     }
+    cell.accessoryType = UITableViewCellAccessoryDetailButton;
     return cell;
 }
 
@@ -105,6 +106,10 @@
     NSString *history = self.historyArray[indexPath.row];
     NSArray<NSString *> *parsed = [history componentsSeparatedByString:@"\t"];
     self.inputTextField.text = parsed[0];
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(nonnull NSIndexPath *)indexPath {
+    NSLog(@"tapped");
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -14,4 +14,27 @@
     [super viewDidLoad];
 }
 
+- (IBAction)mail:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:tannakaken@gmail.com"]
+                                       options:@{} completionHandler:nil];
+}
+
+- (IBAction)webPage:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://tannakaken.xyz"]
+    options:@{} completionHandler:nil];
+}
+
+- (IBAction)dojinPage:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://forcing.nagoya"]
+    options:@{} completionHandler:nil];
+}
+
+
+- (IBAction)novel:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://tannakaken.xyz/novels/HamiltonsDream"]
+    options:@{} completionHandler:nil];
+}
+
+
+
 @end
