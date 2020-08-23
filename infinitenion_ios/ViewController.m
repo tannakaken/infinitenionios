@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SuperComplex.h"
+#import "Tutorial.h"
 
 #if GOOGLE_API_ENABLED
 @import GoogleMobileAds;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 
 @property (nonatomic) NSMutableArray<NSString *> *historyArray;
+@property (nonatomic) Tutorial *tutorial;
 #if GOOGLE_API_ENABLED
 @property(nonatomic, strong) GADBannerView *bannerView;
 #endif
@@ -28,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tutorial = [Tutorial new];
     self.historyArray = [NSMutableArray new];
     [self loadHistory];
     self.historyTableView.delegate = self;
@@ -53,6 +56,11 @@
 #endif
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.tutorial showTutorial:self];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.inputTextField resignFirstResponder];
     return YES;
@@ -71,6 +79,8 @@
     }
     NSString *history = [NSString stringWithFormat:@"%@\t%@", inputText, result];
     [self addHistory:history];
+    [self.tutorial showTutorial:self];
+    
 }
 
 - (void)addHistory:(NSString *)history {

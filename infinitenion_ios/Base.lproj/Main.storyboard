@@ -98,6 +98,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNC-hU-oBt">
                                 <rect key="frame" x="345" y="99" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changeTutorialShowing:" destination="1JP-fi-jCH" eventType="valueChanged" id="Oq8-Sn-7B0"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者：淡中　圏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4W-bQ-mmo">
                                 <rect key="frame" x="20" y="205" width="122" height="20.5"/>
@@ -193,6 +196,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mPo-gs-C6I"/>
                     </view>
+                    <connections>
+                        <outlet property="tutorialShowingSwitch" destination="eNC-hU-oBt" id="npS-xU-vQ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RS9-AR-hAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

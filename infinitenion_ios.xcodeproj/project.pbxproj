@@ -10,6 +10,7 @@
 		2E25737F24E7807600F1CA9B /* Calc_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E25737E24E7807600F1CA9B /* Calc_Test.m */; };
 		2E3303CC2441C7B5004A6C6D /* SuperComplexParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3303CB2441C7B5004A6C6D /* SuperComplexParser.m */; };
 		2E9352CD24F20B24009DBA6F /* ConfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9352CC24F20B24009DBA6F /* ConfViewController.m */; };
+		2E9352D024F223FB009DBA6F /* Tutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9352CF24F223FB009DBA6F /* Tutorial.m */; };
 		2EF7EF9324017CA500E0A522 /* SuperComplexStringifyer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7EF9224017CA500E0A522 /* SuperComplexStringifyer.m */; };
 		4026182722B478F8009F531B /* Zero_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182622B478F8009F531B /* Zero_Tests.m */; };
 		4026182922B66B3D009F531B /* NaN_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026182822B66B3D009F531B /* NaN_Tests.m */; };
@@ -57,6 +58,8 @@
 		2E3303CB2441C7B5004A6C6D /* SuperComplexParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperComplexParser.m; sourceTree = "<group>"; };
 		2E9352CC24F20B24009DBA6F /* ConfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfViewController.m; sourceTree = "<group>"; };
 		2E9352CE24F20B36009DBA6F /* ConfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfViewController.h; sourceTree = "<group>"; };
+		2E9352CF24F223FB009DBA6F /* Tutorial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tutorial.m; sourceTree = "<group>"; };
+		2E9352D124F2240A009DBA6F /* Tutorial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tutorial.h; sourceTree = "<group>"; };
 		2EA4E3383F5CF9216F1C4B18 /* Pods_infinitenion_ios_infinitenion_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_infinitenion_ios_infinitenion_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF7EF9224017CA500E0A522 /* SuperComplexStringifyer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperComplexStringifyer.m; sourceTree = "<group>"; };
 		2EF7EF9424017CC700E0A522 /* SuperComplexStringifyer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperComplexStringifyer.h; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				406F6BE622A0EC31001D7D07 /* main.m */,
 				2E9352CC24F20B24009DBA6F /* ConfViewController.m */,
 				2E9352CE24F20B36009DBA6F /* ConfViewController.h */,
+				2E9352CF24F223FB009DBA6F /* Tutorial.m */,
+				2E9352D124F2240A009DBA6F /* Tutorial.h */,
 			);
 			path = infinitenion_ios;
 			sourceTree = "<group>";
@@ -501,6 +506,7 @@
 				406F6C1422A42E37001D7D07 /* Zero.m in Sources */,
 				2E9352CD24F20B24009DBA6F /* ConfViewController.m in Sources */,
 				406F6C0B22A0EDEE001D7D07 /* CayleyDickson.m in Sources */,
+				2E9352D024F223FB009DBA6F /* Tutorial.m in Sources */,
 				406F6C1A22B0098E001D7D07 /* NaN.m in Sources */,
 				2EF7EF9324017CA500E0A522 /* SuperComplexStringifyer.m in Sources */,
 				406F6BDC22A0EC30001D7D07 /* ViewController.m in Sources */,

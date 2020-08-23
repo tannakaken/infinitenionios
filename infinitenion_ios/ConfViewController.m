@@ -8,10 +8,17 @@
 
 #import "ConfViewController.h"
 
+@interface ConfViewController()
+@property (weak, nonatomic) IBOutlet UISwitch *tutorialShowingSwitch;
+@end
+
 @implementation ConfViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSUserDefaults *ud = NSUserDefaults.standardUserDefaults;
+    BOOL tutorialShowing = ![ud boolForKey:@"tutorialNotShowing"];
+    self.tutorialShowingSwitch.on = tutorialShowing;
 }
 
 - (IBAction)mail:(id)sender {
@@ -35,6 +42,10 @@
     options:@{} completionHandler:nil];
 }
 
+- (IBAction)changeTutorialShowing:(id)sender {
+    NSUserDefaults *ud = NSUserDefaults.standardUserDefaults;
+    [ud setBool:!self.tutorialShowingSwitch.on forKey:@"tutorialNotShowing"];
+}
 
 
 @end
