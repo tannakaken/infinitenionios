@@ -21,6 +21,12 @@
     self.tutorialShowingSwitch.on = tutorialShowing;
 }
 
+- (IBAction)twitter:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://twitter.com/tannakaken"]
+    options:@{} completionHandler:nil];
+}
+
+
 - (IBAction)mail:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto:tannakaken@gmail.com"]
                                        options:@{} completionHandler:nil];

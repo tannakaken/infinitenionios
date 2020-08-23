@@ -109,39 +109,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gba-yv-ohQ">
-                                <rect key="frame" x="20" y="233.5" width="58" height="21"/>
+                                <rect key="frame" x="20" y="269.5" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryc-aS-1L0">
-                                <rect key="frame" x="74" y="229" width="163" height="30"/>
+                                <rect key="frame" x="74" y="265" width="163" height="30"/>
                                 <state key="normal" title="tannakaken@gmail.com"/>
                                 <connections>
                                     <action selector="mail:" destination="1JP-fi-jCH" eventType="touchUpInside" id="W8d-4o-8Pi"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="webページ：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWk-ym-Y8x">
-                                <rect key="frame" x="20" y="267" width="102" height="21"/>
+                                <rect key="frame" x="20" y="303" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4p-gx-lLE">
-                                <rect key="frame" x="130" y="262.5" width="107" height="30"/>
+                                <rect key="frame" x="130" y="298.5" width="107" height="30"/>
                                 <state key="normal" title="tannakaken.xyz"/>
                                 <connections>
                                     <action selector="webPage:" destination="1JP-fi-jCH" eventType="touchUpInside" id="arI-bg-8MP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="同人サークル：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1z-05-Ohz">
-                                <rect key="frame" x="20" y="300.5" width="122" height="21"/>
+                                <rect key="frame" x="20" y="336.5" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l71-wi-nNQ">
-                                <rect key="frame" x="135" y="296" width="102" height="30"/>
+                                <rect key="frame" x="135" y="332" width="102" height="30"/>
                                 <state key="normal" title="forcing.nagoya"/>
                                 <connections>
                                     <action selector="dojinPage:" destination="1JP-fi-jCH" eventType="touchUpInside" id="CrM-I5-MFf"/>
@@ -154,16 +154,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="関連小説" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAv-j2-AWE">
-                                <rect key="frame" x="20" y="329.5" width="70" height="21"/>
+                                <rect key="frame" x="20" y="365.5" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGK-uS-6Ko">
-                                <rect key="frame" x="145" y="325" width="92" height="30"/>
+                                <rect key="frame" x="145" y="361" width="92" height="30"/>
                                 <state key="normal" title="Hamiltonの夢"/>
                                 <connections>
                                     <action selector="novel:" destination="1JP-fi-jCH" eventType="touchUpInside" id="mpE-xI-lZB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bi-VP-JBg">
+                                <rect key="frame" x="20" y="240.5" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewl-ZO-GQw">
+                                <rect key="frame" x="145" y="236" width="92" height="30"/>
+                                <state key="normal" title="@tannakaken"/>
+                                <connections>
+                                    <action selector="twitter:" destination="1JP-fi-jCH" eventType="touchUpInside" id="ZQw-HF-uAR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -174,6 +187,7 @@
                             <constraint firstItem="j4p-gx-lLE" firstAttribute="centerY" secondItem="GWk-ym-Y8x" secondAttribute="centerY" id="50N-3s-VOz"/>
                             <constraint firstItem="ZaF-zH-swy" firstAttribute="top" secondItem="mPo-gs-C6I" secondAttribute="top" constant="60" id="AXh-vd-Xww"/>
                             <constraint firstItem="l71-wi-nNQ" firstAttribute="centerY" secondItem="n1z-05-Ohz" secondAttribute="centerY" id="Ad3-Eu-g5m"/>
+                            <constraint firstItem="gba-yv-ohQ" firstAttribute="top" secondItem="8bi-VP-JBg" secondAttribute="bottom" constant="8" id="ETx-ez-AGs"/>
                             <constraint firstItem="ryc-aS-1L0" firstAttribute="centerY" secondItem="gba-yv-ohQ" secondAttribute="centerY" id="F3T-PP-TGp"/>
                             <constraint firstItem="n1z-05-Ohz" firstAttribute="top" secondItem="j4p-gx-lLE" secondAttribute="bottom" constant="8" id="FV0-QQ-3Wg"/>
                             <constraint firstItem="fAv-j2-AWE" firstAttribute="top" secondItem="n1z-05-Ohz" secondAttribute="bottom" constant="8" id="Hy2-YI-Yzd"/>
@@ -185,9 +199,12 @@
                             <constraint firstItem="mPo-gs-C6I" firstAttribute="trailing" secondItem="eNC-hU-oBt" secondAttribute="trailing" constant="20" id="QTw-Ju-Zqd"/>
                             <constraint firstItem="l4W-bQ-mmo" firstAttribute="top" secondItem="ZaF-zH-swy" secondAttribute="bottom" constant="80" id="Rc4-86-xmN"/>
                             <constraint firstItem="GWk-ym-Y8x" firstAttribute="leading" secondItem="mPo-gs-C6I" secondAttribute="leading" constant="20" id="Tnm-xw-GdM"/>
-                            <constraint firstItem="gba-yv-ohQ" firstAttribute="top" secondItem="l4W-bQ-mmo" secondAttribute="bottom" constant="8" id="XMe-fU-xqI"/>
+                            <constraint firstItem="ewl-ZO-GQw" firstAttribute="trailing" secondItem="ryc-aS-1L0" secondAttribute="trailing" id="U1y-EV-pcY"/>
                             <constraint firstItem="eNC-hU-oBt" firstAttribute="centerY" secondItem="ZaF-zH-swy" secondAttribute="centerY" id="Xuj-g4-pwh"/>
+                            <constraint firstItem="8bi-VP-JBg" firstAttribute="leading" secondItem="mPo-gs-C6I" secondAttribute="leading" constant="20" id="a6a-bM-Ez4"/>
+                            <constraint firstItem="8bi-VP-JBg" firstAttribute="top" secondItem="l4W-bQ-mmo" secondAttribute="bottom" constant="15" id="jS1-Yv-ssl"/>
                             <constraint firstItem="rGK-uS-6Ko" firstAttribute="trailing" secondItem="l71-wi-nNQ" secondAttribute="trailing" id="kcC-nL-Dry"/>
+                            <constraint firstItem="ewl-ZO-GQw" firstAttribute="centerY" secondItem="8bi-VP-JBg" secondAttribute="centerY" id="n5a-bR-pUH"/>
                             <constraint firstItem="fAv-j2-AWE" firstAttribute="leading" secondItem="mPo-gs-C6I" secondAttribute="leading" constant="20" id="nSB-lu-FlK"/>
                             <constraint firstItem="ryc-aS-1L0" firstAttribute="leading" secondItem="gba-yv-ohQ" secondAttribute="trailing" constant="-4" id="njB-tW-LRS"/>
                             <constraint firstItem="j4p-gx-lLE" firstAttribute="trailing" secondItem="ryc-aS-1L0" secondAttribute="trailing" id="r26-OZ-aUH"/>
